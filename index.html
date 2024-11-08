@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Spesifikasi Laptop</title>
+    <link rel="stylesheet" href="index.css">
+ <!-- Add SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+<div class="header">
+    <h1>Pilih Spesifikasi Laptop</h1>
+    <img src="assets/logo ubsi.jpg" alt="LOGO UNIVERSITAS">
+</div>
+
+<!-- Combo Box Peran -->
+<label for="role">Pilih Peran:</label>
+<select id="role" onchange="updateModels()">
+    <option value="" disabled selected>-Pilih Peran-</option>
+    <option value="Pelajar">Pelajar</option>
+    <option value="Pelajar, Mahasiswa">Pelajar, Mahasiswa</option>
+    <option value="Mahasiswa, Karyawan">Mahasiswa, Karyawan</option>
+    <option value="Profesional, Mahasiswa, Karyawan">Profesional, Mahasiswa, Karyawan</option>
+</select>
+
+<!-- Combo Box Model -->
+<label for="model">Pilih Model:</label>
+<select id="model" onchange="updateRAMOptions(); updateSegmentOptions(); updateProcessorOptions(); updateGPUOptions()">
+    <option value="" disabled selected>-Pilih Model-</option>
+</select>
+
+<!-- Combo Box Segmen -->
+<label for="segment">Pilih Segmen:</label>
+<select id="segment">
+    <option value="" disabled selected>-Pilih Segmen-</option>
+</select>
+
+
+<!-- Combo Box RAM -->
+<label for="ram">Pilih RAM:</label>
+<select id="ram">
+    <option value="" disabled selected>Pilih RAM</option>
+</select>
+
+<!-- Combo Box Penyimpanan -->
+<label for="storage">Pilih Penyimpanan:</label>
+<select id="storage">
+    <option value="NVME 3.0 256GB">256GB NVME 3.0</option>
+    <option value="512GB NVME 3.0">512GB NVME 3.0</option>
+</select>
+
+
+<!-- Tombol untuk Mengirim -->
+<button onclick="displaySpecifications()">Tampilkan Spesifikasi</button>
+
+<!-- Tampilkan Spesifikasi yang Dipilih -->
+<div id="output"></div>
+
+<script src="index.js"></script>
+</body>
+</html>
