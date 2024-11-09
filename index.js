@@ -29,11 +29,11 @@ const laptopData = {
         displaySpecs: "1920x1080p, 250 nits, 45% NTSC, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 4500000 // Harga dasar
+        basePrice: 4000000 // Harga dasar
     },
     "Ideapad Slim 3": {
         brand: "LENOVO Ideapad Slim 3",
-        role: "Pelajar, Mahasiswa",
+        role: "Mahasiswa",
         segment: "Coding, Office",
         material: "Full ABS Plastic",
         keyboardBacklight: "NON LED",
@@ -45,11 +45,11 @@ const laptopData = {
         displaySpecs: "1920x1080p, 250 nits, 45% NTSC, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 5590000
+        basePrice: 5000000
     },
     "V14 G4 RYZEN 5": {
         brand: "LENOVO V14 G4 RYZEN 5",
-        role: "Mahasiswa, Karyawan",
+        role: "Karyawan",
         segment: "Coding, Office, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "NON LED",
@@ -65,7 +65,7 @@ const laptopData = {
     },
     "Ideapad Slim 3 14": {
         brand: "LENOVO Ideapad Slim 3 14",
-        role: "Mahasiswa, Karyawan",
+        role: "Karyawan",
         segment: "Coding, Office, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "White LED",
@@ -81,7 +81,7 @@ const laptopData = {
     },
     "Ideapad Duet 3i 11 Touch": {
         brand: "LENOVO Ideapad Duet 3i 11 Touch",
-        role: "Karyawan, Mahasiswa, Profesional",
+        role: "Profesional",
         segment: "Outdoor, Office, Coding, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "NON LED",
@@ -97,7 +97,7 @@ const laptopData = {
     },
     "IDEAPAD FLEX 5 14": {
         brand: "LENOVO IDEAPAD FLEX 5 14",
-        role: "Karyawan, Profesional, Mahasiswa",
+        role: "Profesional",
         segment: "Multimedia, Outdoor, Office, Editing, Coding",
         material: "Full Aluminium",
         keyboardBacklight: "White LED",
@@ -113,7 +113,7 @@ const laptopData = {
     },
     "LOQ 15 RTX 2050": {
         brand: "LENOVO LOQ 15 RTX 2050",
-        role: "Karyawan, Profesional, Mahasiswa",
+        role: "Profesional",
         segment: "3D / Render & Modeling, Coding, Editing, Office, Gaming, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "NON LED",
@@ -129,7 +129,7 @@ const laptopData = {
     },
     "Ideapad Slim 5 Light 14": {
         brand: "LENOVO Ideapad Slim 5 Light 14",
-        role: "Karyawan, Profesional, Mahasiswa",
+        role: "Profesional",
         segment: "3D / Render & Modeling, Coding, Editing, Office, Gaming, Multimedia",
         material: "Aluminium (Top) ABS (Bottom)",
         keyboardBacklight: "White LED",
@@ -145,7 +145,7 @@ const laptopData = {
     },
     "Ideapad Slim 5": {
         brand: "LENOVO Ideapad Slim 5",
-        role: "Karyawan, Profesional, Mahasiswa",
+        role: "Profesional",
         segment: "Editing, Multimedia",
         material: "Full Aluminium",
         keyboardBacklight: "White LED",
@@ -161,7 +161,7 @@ const laptopData = {
     },
     "Ideapad Slim 5 (Gaming)": {
         brand: "LENOVO Ideapad Slim 5 (Gaming)",
-        role: "Karyawan, Profesional, Mahasiswa",
+        role: "Profesional",
         segment: "Editing, Gaming, Multimedia",
         material: "Full Aluminium",
         keyboardBacklight: "White LED",
@@ -177,7 +177,7 @@ const laptopData = {
     },
     "LOQ 15 RTX 3050": {
         brand: "LENOVO LOQ 15 RTX 3050",
-        role: "Mahasiswa, Karyawan, Profesional",
+        role: "Profesional",
         segment: "3D / Render & Modeling, Coding, Editing, Office, Gaming, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "White LED",
@@ -189,26 +189,21 @@ const laptopData = {
         displaySpecs: "1920x1080p, 300 nits, 100% SRGB, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 13490000
+        basePrice: 1349000
     }
 };
 
 // Harga tambahan berdasarkan RAM dan penyimpanan
 const additionalPrice = {
     "8GB DDR4": 500000,
-    "16GB DDR4": 2000000,
+    "16GB DDR4": 1000000,
     "8GB LPDDR5": 500000,
-    "16GB LPDDR5": 1300000,
-    "12GB DDR5": 1500000,
-    "16GB DDR5": 2300000,
-    "8GB LPDDR5X": 1700000,
-    "16GB LPDDR5X": 2500000, 
-    "8GB LPDDR4X": 1600000,
-    "16GB LPDDR4X": 2600000,
-    "NVME 3.0 256GB": 500000,
-    "512GB NVME 3.0": 1500000,
-};
+    "12GB DDR5": 750000,
+    "16GB LPDDR5x": 1500000,
+    "NVME 3.0 256GB": 0,  // Sesuaikan format dengan yang ada pada laptopData
+    "512GB NVME 3.0": 500000,
 
+};
 
 
 
@@ -217,19 +212,16 @@ const additionalPrice = {
 function updateModels() {
     const role = document.getElementById('role').value;
     const modelSelect = document.getElementById('model');
-    
-    // Bersihkan opsi pilihan sebelumnya
-    modelSelect.innerHTML = '<option value="">Select Model</option>';
-    
+    modelSelect.innerHTML = '<option value="">Pilih Model</option>';
     let availableModels = [];
 
     if (role === "Pelajar") {
         availableModels = ["Ideapad Slim 1", "V14 G3 IAP"];
-    } else if (role === "Pelajar, Mahasiswa") {
+    } else if (role === "Mahasiswa") {
         availableModels = ["Ideapad Slim 3"];
-    } else if (role === "Mahasiswa, Karyawan") {
+    } else if (role === "Karyawan") {
         availableModels = ["V14 G4 RYZEN 5", "Ideapad Slim 3 14"];
-    } else if (role === "Profesional, Mahasiswa, Karyawan") {
+    } else if (role === "Profesional") {
         availableModels = [
             "Ideapad Duet 3i 11 Touch", "IDEAPAD FLEX 5 14", 
             "LOQ 15 RTX 2050", "Ideapad Slim 5 Light 14", 
@@ -248,7 +240,7 @@ function updateRAMOptions() {
     const ramSelect = document.getElementById('ram');
 
     // Bersihkan opsi RAM sebelumnya
-    ramSelect.innerHTML = '<option value="">Select RAM</option>';
+    ramSelect.innerHTML = '<option value="">Pilih RAM</option>';
 
     let validRAMOptions = [];
 
@@ -268,7 +260,7 @@ function updateRAMOptions() {
             validRAMOptions = ["8GB LPDDR5", "16GB LPDDR5"];
             break;
         case "IDEAPAD FLEX 5 14":
-            validRAMOptions = ["8GB LPDDR4X", "16GB LPDDR4X"];
+            validRAMOptions = ["12GB LPDDR4X", "16GB LPDDR4X"];
             break;
         case "LOQ 15 RTX 3050":
             validRAMOptions = ["12GB DDR5", "16GB DDR5"];
@@ -277,16 +269,16 @@ function updateRAMOptions() {
             validRAMOptions = ["8GB LPDDR5", "16GB LPDDR5"];
             break;
         case "LOQ 15 RTX 2050":
-            validRAMOptions = ["12GB DDR5", "16GB DDR5"];
+            validRAMOptions = ["16GB DDR5", "12GB DDR5"];
             break;
         case "Ideapad Slim 5 Light 14":
             validRAMOptions = ["8GB DDR4", "16GB DDR4"];
             break;
         case "Ideapad Slim 5":
-            validRAMOptions = ["8GB LPDDR5X", "16GB LPDDR5X"];
+            validRAMOptions = ["8GB LPDDR5x", "16GB LPDDR5x"];
             break;
         case "Ideapad Slim 5 (Gaming)":
-            validRAMOptions = ["8GB LPDDR5X", "16GB LPDDR5X"];
+            validRAMOptions = ["8GB LPDDR5x", "16GB LPDDR5x"];
             break;
         default:
             validRAMOptions = [];
@@ -307,7 +299,7 @@ function updateSegmentOptions() {
     const model = document.getElementById("model").value;
     const segmentSelect = document.getElementById("segment");
 
-    segmentSelect.innerHTML = '<option value="" disabled selected>-Pilih Segmen-</option>';
+    segmentSelect.innerHTML = '<option value="" disabled selected>Pilih Segmen</option>';
     let validSegments = [];
     switch (role) {
         case "Pelajar":
@@ -318,19 +310,19 @@ function updateSegmentOptions() {
             }
             break;
     
-        case "Pelajar, Mahasiswa":
+        case "Mahasiswa":
             if (model === "Ideapad Slim 3") {
                 validSegments = ["Coding, Office"];
             }
             break;
     
-        case "Mahasiswa, Karyawan":
+        case "Karyawan":
             if (model === "V14 G4 RYZEN 5" || model === "Ideapad Slim 3 14") {
                 validSegments = ["Coding, Office, Multimedia"];
             }
             break;
     
-            case "Profesional, Mahasiswa, Karyawan":
+            case "Profesional":
                 if (model === "LOQ 15 RTX 2050" || model === "Ideapad Slim 5 Light 14" || model === "LOQ 15 RTX 3050") {
                     validSegments = ["3D / Render & Modeling, Coding, Editing, Office, Gaming, Multimedia"];
                 } else if (model === "Ideapad Duet 3i 11 Touch") {
@@ -339,7 +331,7 @@ function updateSegmentOptions() {
                     validSegments = ["Multimedia, Outdoor, Office, Editing, Coding"];
                 } else if (model === "Ideapad Slim 5") {
                     validSegments = ["Editing, Multimedia"];
-                } else if (model === "Ideapad Slim 5 (Gaming)") {  // Nama sesuai dengan data di laptopData
+                } else if (model === "Ideapad Slim 5 (Gaming)") {  
                     validSegments = ["Editing, Multimedia, Gaming"];
                 }
                 break;
@@ -356,7 +348,7 @@ function updateSegmentOptions() {
 
 
     
-// Fungsi untuk menampilkan spesifikasi laptop dan total harga
+
 function displaySpecifications() {
     const role = document.getElementById('role').value;
     const model = document.getElementById('model').value;
@@ -364,26 +356,30 @@ function displaySpecifications() {
     const ram = document.getElementById('ram').value;
     const storage = document.getElementById('storage').value;
 
-// Periksa apakah semua opsi telah dipilih
     if (!role || !model || !segment || !ram || !storage) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Mohon pilih semua opsi sebelum menampilkan spesifikasi.'
+            text: 'Mohon pilih semua opsi sebelum menampilkan spesifikasi.',
+            confirmButtonColor: '#d33',
+            background: '#ffffff',
+            iconColor: '#721c24',
+            customClass: {
+                title: 'font-weight-bold',
+                content: 'text-danger'
+            }
         });
         return;
     }
- // Ambil data laptop dan harga tambahan
+
     const laptop = laptopData[model];
     const ramPrice = additionalPrice[ram] || 0;
     const storagePrice = additionalPrice[storage] || 0;
     const totalPrice = laptop.basePrice + ramPrice + storagePrice;
-
-// Tampilkan spesifikasi dan total harga
     Swal.fire({
         title: 'Spesifikasi Laptop',
         html: `
-            <div style="text-align: left;">
+            <div style="text-align: left; font-size: 16px; line-height: 1.6;">
                 <strong>Brand:</strong> ${laptop.brand}<br>
                 <strong>Role:</strong> ${laptop.role}<br>
                 <strong>Segment:</strong> ${laptop.segment}<br>
@@ -400,19 +396,15 @@ function displaySpecifications() {
             </div>
         `,
         icon: 'info',
-        showCancelButton: true,
-        confirmButtonText: 'Selesai',
-        cancelButtonText: 'Kembali',
-        confirmButtonColor: '#28a745',
-        cancelButtonColor: '#d33',
-        background: '#f8f9fa',
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#20C997',
+        background: '#ffffff',
         width: '600px',
-        padding: '20px',
+        padding: '25px',
         customClass: {
-            title: 'font-weight-bold',
-            htmlContainer: 'text-start'
+            title: 'font-weight-bold text-primary',
+            htmlContainer: 'text-start',
+            content: 'font-size-16',
         },
-        didOpen: () => Swal.showLoading(),
-        willClose: () => Swal.close()
     });
-}
+}    
