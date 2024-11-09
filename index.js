@@ -33,7 +33,7 @@ const laptopData = {
     },
     "Ideapad Slim 3": {
         brand: "LENOVO Ideapad Slim 3",
-        role: "Pelajar, Mahasiswa",
+        role: "Mahasiswa",
         segment: "Coding, Office",
         material: "Full ABS Plastic",
         keyboardBacklight: "NON LED",
@@ -49,7 +49,7 @@ const laptopData = {
     },
     "V14 G4 RYZEN 5": {
         brand: "LENOVO V14 G4 RYZEN 5",
-        role: "Mahasiswa, Karyawan",
+        role: "Karyawan",
         segment: "Coding, Office, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "NON LED",
@@ -65,7 +65,7 @@ const laptopData = {
     },
     "Ideapad Slim 3 14": {
         brand: "LENOVO Ideapad Slim 3 14",
-        role: "Mahasiswa, Karyawan",
+        role: "Karyawan",
         segment: "Coding, Office, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "White LED",
@@ -81,7 +81,7 @@ const laptopData = {
     },
     "Ideapad Duet 3i 11 Touch": {
         brand: "LENOVO Ideapad Duet 3i 11 Touch",
-        role: "Karyawan, Mahasiswa, Profesional",
+        role: "Profesional",
         segment: "Outdoor, Office, Coding, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "NON LED",
@@ -97,7 +97,7 @@ const laptopData = {
     },
     "IDEAPAD FLEX 5 14": {
         brand: "LENOVO IDEAPAD FLEX 5 14",
-        role: "Karyawan, Profesional, Mahasiswa",
+        role: "Profesional",
         segment: "Multimedia, Outdoor, Office, Editing, Coding",
         material: "Full Aluminium",
         keyboardBacklight: "White LED",
@@ -113,7 +113,7 @@ const laptopData = {
     },
     "LOQ 15 RTX 2050": {
         brand: "LENOVO LOQ 15 RTX 2050",
-        role: "Karyawan, Profesional, Mahasiswa",
+        role: "Profesional",
         segment: "3D / Render & Modeling, Coding, Editing, Office, Gaming, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "NON LED",
@@ -129,7 +129,7 @@ const laptopData = {
     },
     "Ideapad Slim 5 Light 14": {
         brand: "LENOVO Ideapad Slim 5 Light 14",
-        role: "Karyawan, Profesional, Mahasiswa",
+        role: "Profesional",
         segment: "3D / Render & Modeling, Coding, Editing, Office, Gaming, Multimedia",
         material: "Aluminium (Top) ABS (Bottom)",
         keyboardBacklight: "White LED",
@@ -145,7 +145,7 @@ const laptopData = {
     },
     "Ideapad Slim 5": {
         brand: "LENOVO Ideapad Slim 5",
-        role: "Karyawan, Profesional, Mahasiswa",
+        role: "Profesional",
         segment: "Editing, Multimedia",
         material: "Full Aluminium",
         keyboardBacklight: "White LED",
@@ -161,7 +161,7 @@ const laptopData = {
     },
     "Ideapad Slim 5 (Gaming)": {
         brand: "LENOVO Ideapad Slim 5 (Gaming)",
-        role: "Karyawan, Profesional, Mahasiswa",
+        role: "Profesional",
         segment: "Editing, Gaming, Multimedia",
         material: "Full Aluminium",
         keyboardBacklight: "White LED",
@@ -177,7 +177,7 @@ const laptopData = {
     },
     "LOQ 15 RTX 3050": {
         brand: "LENOVO LOQ 15 RTX 3050",
-        role: "Mahasiswa, Karyawan, Profesional",
+        role: "Profesional",
         segment: "3D / Render & Modeling, Coding, Editing, Office, Gaming, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "White LED",
@@ -217,11 +217,11 @@ function updateModels() {
 
     if (role === "Pelajar") {
         availableModels = ["Ideapad Slim 1", "V14 G3 IAP"];
-    } else if (role === "Pelajar, Mahasiswa") {
+    } else if (role === "Mahasiswa") {
         availableModels = ["Ideapad Slim 3"];
-    } else if (role === "Mahasiswa, Karyawan") {
+    } else if (role === "Karyawan") {
         availableModels = ["V14 G4 RYZEN 5", "Ideapad Slim 3 14"];
-    } else if (role === "Profesional, Mahasiswa, Karyawan") {
+    } else if (role === "Profesional") {
         availableModels = [
             "Ideapad Duet 3i 11 Touch", "IDEAPAD FLEX 5 14", 
             "LOQ 15 RTX 2050", "Ideapad Slim 5 Light 14", 
@@ -310,19 +310,19 @@ function updateSegmentOptions() {
             }
             break;
     
-        case "Pelajar, Mahasiswa":
+        case "Mahasiswa":
             if (model === "Ideapad Slim 3") {
                 validSegments = ["Coding, Office"];
             }
             break;
     
-        case "Mahasiswa, Karyawan":
+        case "Karyawan":
             if (model === "V14 G4 RYZEN 5" || model === "Ideapad Slim 3 14") {
                 validSegments = ["Coding, Office, Multimedia"];
             }
             break;
     
-            case "Profesional, Mahasiswa, Karyawan":
+            case "Profesional":
                 if (model === "LOQ 15 RTX 2050" || model === "Ideapad Slim 5 Light 14" || model === "LOQ 15 RTX 3050") {
                     validSegments = ["3D / Render & Modeling, Coding, Editing, Office, Gaming, Multimedia"];
                 } else if (model === "Ideapad Duet 3i 11 Touch") {
