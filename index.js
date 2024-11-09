@@ -33,7 +33,7 @@ const laptopData = {
     },
     "Ideapad Slim 3": {
         brand: "LENOVO Ideapad Slim 3",
-        role: "Mahasiswa",
+        role: "Pelajar, Mahasiswa",
         segment: "Coding, Office",
         material: "Full ABS Plastic",
         keyboardBacklight: "NON LED",
@@ -49,7 +49,7 @@ const laptopData = {
     },
     "V14 G4 RYZEN 5": {
         brand: "LENOVO V14 G4 RYZEN 5",
-        role: "Karyawan",
+        role: "Mahasiswa, Karyawan",
         segment: "Coding, Office, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "NON LED",
@@ -65,7 +65,7 @@ const laptopData = {
     },
     "Ideapad Slim 3 14": {
         brand: "LENOVO Ideapad Slim 3 14",
-        role: "Karyawan",
+        role: "Mahasiswa, Karyawan",
         segment: "Coding, Office, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "White LED",
@@ -81,7 +81,7 @@ const laptopData = {
     },
     "Ideapad Duet 3i 11 Touch": {
         brand: "LENOVO Ideapad Duet 3i 11 Touch",
-        role: "Profesional",
+        role: "Karyawan, Mahasiswa, Profesional",
         segment: "Outdoor, Office, Coding, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "NON LED",
@@ -97,7 +97,7 @@ const laptopData = {
     },
     "IDEAPAD FLEX 5 14": {
         brand: "LENOVO IDEAPAD FLEX 5 14",
-        role: "Profesional",
+        role: "Karyawan, Profesional, Mahasiswa",
         segment: "Multimedia, Outdoor, Office, Editing, Coding",
         material: "Full Aluminium",
         keyboardBacklight: "White LED",
@@ -113,7 +113,7 @@ const laptopData = {
     },
     "LOQ 15 RTX 2050": {
         brand: "LENOVO LOQ 15 RTX 2050",
-        role: "Profesional",
+        role: "Karyawan, Profesional, Mahasiswa",
         segment: "3D / Render & Modeling, Coding, Editing, Office, Gaming, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "NON LED",
@@ -129,7 +129,7 @@ const laptopData = {
     },
     "Ideapad Slim 5 Light 14": {
         brand: "LENOVO Ideapad Slim 5 Light 14",
-        role: "Profesional",
+        role: "Karyawan, Profesional, Mahasiswa",
         segment: "3D / Render & Modeling, Coding, Editing, Office, Gaming, Multimedia",
         material: "Aluminium (Top) ABS (Bottom)",
         keyboardBacklight: "White LED",
@@ -145,7 +145,7 @@ const laptopData = {
     },
     "Ideapad Slim 5": {
         brand: "LENOVO Ideapad Slim 5",
-        role: "Profesional",
+        role: "Karyawan, Profesional, Mahasiswa",
         segment: "Editing, Multimedia",
         material: "Full Aluminium",
         keyboardBacklight: "White LED",
@@ -161,7 +161,7 @@ const laptopData = {
     },
     "Ideapad Slim 5 (Gaming)": {
         brand: "LENOVO Ideapad Slim 5 (Gaming)",
-        role: "Profesional",
+        role: "Karyawan, Profesional, Mahasiswa",
         segment: "Editing, Gaming, Multimedia",
         material: "Full Aluminium",
         keyboardBacklight: "White LED",
@@ -177,7 +177,7 @@ const laptopData = {
     },
     "LOQ 15 RTX 3050": {
         brand: "LENOVO LOQ 15 RTX 3050",
-        role: "Profesional",
+        role: "Mahasiswa, Karyawan, Profesional",
         segment: "3D / Render & Modeling, Coding, Editing, Office, Gaming, Multimedia",
         material: "Full ABS Plastic",
         keyboardBacklight: "White LED",
@@ -212,16 +212,16 @@ const additionalPrice = {
 function updateModels() {
     const role = document.getElementById('role').value;
     const modelSelect = document.getElementById('model');
-    modelSelect.innerHTML = '<option value="">Pilih Model</option>';
+    modelSelect.innerHTML = '<option value="">Select Model</option>';
     let availableModels = [];
 
     if (role === "Pelajar") {
         availableModels = ["Ideapad Slim 1", "V14 G3 IAP"];
-    } else if (role === "Mahasiswa") {
+    } else if (role === "Pelajar, Mahasiswa") {
         availableModels = ["Ideapad Slim 3"];
-    } else if (role === "Karyawan") {
+    } else if (role === "Mahasiswa, Karyawan") {
         availableModels = ["V14 G4 RYZEN 5", "Ideapad Slim 3 14"];
-    } else if (role === "Profesional") {
+    } else if (role === "Profesional, Mahasiswa, Karyawan") {
         availableModels = [
             "Ideapad Duet 3i 11 Touch", "IDEAPAD FLEX 5 14", 
             "LOQ 15 RTX 2050", "Ideapad Slim 5 Light 14", 
@@ -240,7 +240,7 @@ function updateRAMOptions() {
     const ramSelect = document.getElementById('ram');
 
     // Bersihkan opsi RAM sebelumnya
-    ramSelect.innerHTML = '<option value="">Pilih RAM</option>';
+    ramSelect.innerHTML = '<option value="">Select RAM</option>';
 
     let validRAMOptions = [];
 
@@ -299,7 +299,7 @@ function updateSegmentOptions() {
     const model = document.getElementById("model").value;
     const segmentSelect = document.getElementById("segment");
 
-    segmentSelect.innerHTML = '<option value="" disabled selected>Pilih Segmen</option>';
+    segmentSelect.innerHTML = '<option value="" disabled selected>-Pilih Segmen-</option>';
     let validSegments = [];
     switch (role) {
         case "Pelajar":
@@ -310,19 +310,19 @@ function updateSegmentOptions() {
             }
             break;
     
-        case "Mahasiswa":
+        case "Pelajar, Mahasiswa":
             if (model === "Ideapad Slim 3") {
                 validSegments = ["Coding, Office"];
             }
             break;
     
-        case "Karyawan":
+        case "Mahasiswa, Karyawan":
             if (model === "V14 G4 RYZEN 5" || model === "Ideapad Slim 3 14") {
                 validSegments = ["Coding, Office, Multimedia"];
             }
             break;
     
-            case "Profesional":
+            case "Profesional, Mahasiswa, Karyawan":
                 if (model === "LOQ 15 RTX 2050" || model === "Ideapad Slim 5 Light 14" || model === "LOQ 15 RTX 3050") {
                     validSegments = ["3D / Render & Modeling, Coding, Editing, Office, Gaming, Multimedia"];
                 } else if (model === "Ideapad Duet 3i 11 Touch") {
@@ -331,7 +331,7 @@ function updateSegmentOptions() {
                     validSegments = ["Multimedia, Outdoor, Office, Editing, Coding"];
                 } else if (model === "Ideapad Slim 5") {
                     validSegments = ["Editing, Multimedia"];
-                } else if (model === "Ideapad Slim 5 (Gaming)") {  
+                } else if (model === "Ideapad Slim 5 (Gaming)") {  // Nama sesuai dengan data di laptopData
                     validSegments = ["Editing, Multimedia, Gaming"];
                 }
                 break;
@@ -360,14 +360,7 @@ function displaySpecifications() {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Mohon pilih semua opsi sebelum menampilkan spesifikasi.',
-            confirmButtonColor: '#d33',
-            background: '#ffffff',
-            iconColor: '#721c24',
-            customClass: {
-                title: 'font-weight-bold',
-                content: 'text-danger'
-            }
+            text: 'Mohon pilih semua opsi sebelum menampilkan spesifikasi.'
         });
         return;
     }
@@ -377,7 +370,7 @@ function displaySpecifications() {
     const storagePrice = additionalPrice[storage] || 0;
     const totalPrice = laptop.basePrice + ramPrice + storagePrice;
 
- Swal.fire({
+    Swal.fire({
         title: 'Spesifikasi Laptop',
         html: `
             <div style="text-align: left;">
