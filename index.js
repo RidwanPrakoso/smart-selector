@@ -189,7 +189,7 @@ const laptopData = {
         displaySpecs: "1920x1080p, 300 nits, 100% SRGB, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 1349000
+        basePrice: 13490000
     }
 };
 
