@@ -27,15 +27,21 @@
 
 <!-- Combo Box Model -->
 <label for="model">Pilih Model:</label>
-<select id="model" onchange="updateRAMOptions(); updateSegmentOptions(); updateProcessorOptions(); updateGPUOptions()">
+<select id="model" onchange="updateRAMOptions(); updateSegmentOptions()">
     <option value="" disabled selected>Pilih Model</option>
 </select>
 
 <!-- Combo Box Segmen -->
 <label for="segment">Pilih Segmen:</label>
-<select id="segment">
-    <option value="" disabled selected>Pilih Segmen</option>
-</select>
+    <select id="segment" onchange="checkSegment()">
+        <option value="" disabled selected>Pilih Segmen</option>
+        <option value="Office">Office</option>
+        <option value="Editing">Editing</option>
+        <option value="Gaming">Gaming</option>
+        <option value="Multimedia">Multimedia</option>
+        <option value="Outdoor">Outdoor</option>
+        <option value="Coding">Coding</option>
+    </select>
 
 
 <!-- Combo Box RAM -->
