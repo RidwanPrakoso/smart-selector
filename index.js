@@ -565,68 +565,70 @@ function updateRAMOptions() {
 
 // Fungsi untuk memperbarui pilihan segmen berdasarkan model dan role
 
+// Daftar segmen untuk setiap model
+const validSegmentsForModel = {
+    "Ideapad Slim 1": ["Office"],
+    "V14 G3 IAP": ["Coding", "Office"],
+    "Ideapad Slim 3": ["Coding", "Office"],
+    "V14 G4 RYZEN 5": ["Coding", "Office", "Multimedia"],
+    "Ideapad Slim 3 14": ["Coding", "Office", "Multimedia"],
+    "LOQ 15 RTX 2050": ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"],
+    "Ideapad Slim 5 Light 14": ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"],
+    "LOQ 15 RTX 3050": ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"],
+    "Ideapad Duet 3i 11 Touch": ["Outdoor", "Office", "Coding", "Multimedia"],
+    "IDEAPAD FLEX 5 14": ["Multimedia", "Outdoor", "Office", "Editing", "Coding"],
+    "Ideapad Slim 5": ["Editing", "Multimedia"],
+    "Ideapad Slim 5 (Gaming)": ["Editing", "Multimedia", "Gaming"]
+};
+
+// Fungsi untuk memperbarui opsi segmen
 function updateSegmentOptions() {
-    const role = document.getElementById("role").value;
-    const model = document.getElementById("model").value;
     const segmentSelect = document.getElementById("segment");
 
+    // Reset pilihan segmen dan tampilkan semua segmen
     segmentSelect.innerHTML = '<option value="" disabled selected>Pilih Segmen</option>';
-    let validSegments = [];
+    const allSegments = ["Office", "Editing", "Gaming", "Multimedia", "Outdoor", "Coding"];
 
-    switch (role) {
-        case "Pelajar":
-            if (model === "Ideapad Slim 1") {
-                validSegments = ["Office"];
-            } else if (model === "V14 G3 IAP") {
-                validSegments = ["Coding", "Office"];
-            }
-            break;
-
-        case "Mahasiswa":
-            if (model === "Ideapad Slim 3") {
-                validSegments = ["Coding", "Office"];
-            }
-            break;
-
-        case "Karyawan":
-            if (model === "V14 G4 RYZEN 5" || model === "Ideapad Slim 3 14") {
-                validSegments = ["Coding", "Office", "Multimedia"];
-            }
-            break;
-
-        case "Profesional":
-            if (model === "LOQ 15 RTX 2050" || model === "Ideapad Slim 5 Light 14" || model === "LOQ 15 RTX 3050") {
-                validSegments = ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"];
-            } else if (model === "Ideapad Duet 3i 11 Touch") {
-                validSegments = ["Outdoor", "Office", "Coding", "Multimedia"];
-            } else if (model === "IDEAPAD FLEX 5 14") {
-                validSegments = ["Multimedia", "Outdoor", "Office", "Editing", "Coding"];
-            } else if (model === "Ideapad Slim 5") {
-                validSegments = ["Editing", "Multimedia"];
-            } else if (model === "Ideapad Slim 5 (Gaming)") {
-                validSegments = ["Editing", "Multimedia", "Gaming"];
-            }
-            break;
-    }
-
-    validSegments = [...new Set(validSegments)];  // Menghilangkan duplikat jika ada
-
-    validSegments.forEach(segment => {
+    // Menampilkan semua segmen di dropdown
+    allSegments.forEach(segment => {
         segmentSelect.innerHTML += `<option value="${segment}">${segment}</option>`;
     });
 }
 
+// Fungsi untuk memeriksa apakah segmen sesuai dengan model yang dipilih
+// Fungsi untuk memeriksa apakah segmen sesuai dengan model yang dipilih
+function checkSegment() {
+    const model = document.getElementById("model").value;
+    const segment = document.getElementById("segment").value;
 
+    const validSegments = validSegmentsForModel[model] || [];
 
+    // Jika segmen tidak sesuai dengan model yang dipilih, tampilkan SweetAlert
+    if (segment && !validSegments.includes(segment)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Segmen Tidak Sesuai!',
+            text: `Segmen '${segment}' tidak sesuai dengan model '${model}'. Pilih segmen yang valid.`,
+        });
+        return false; // Menghentikan proses lebih lanjut
+    }
+    return true; // Jika segmen sesuai
+}
 
+// Fungsi untuk menampilkan spesifikasi laptop
 function displaySpecifications() {
-    const role = document.getElementById('role').value;
-    const model = document.getElementById('model').value;
-    const segment = document.getElementById('segment').value;
-    const ram = document.getElementById('ram').value;
-    const storage = document.getElementById('storage').value;
+    const model = document.getElementById("model").value;
+    const segment = document.getElementById("segment").value;
+    const ram = document.getElementById("ram").value;
+    const storage = document.getElementById("storage").value;
 
-    if (!role || !model || !segment || !ram || !storage) {
+    // Memeriksa jika segmen sesuai dengan model saat tombol ditekan
+    if (!checkSegment()) {
+        return; // Tidak lanjut jika segmen tidak sesuai
+    }
+
+    // Memeriksa apakah semua pilihan sudah dipilih
+    if (!model || !segment || !ram || !storage) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -634,6 +636,7 @@ function displaySpecifications() {
         });
         return;
     }
+
 
     const laptop = laptopData[model];
     const ramPrice = additionalPrice[ram] || 0;
