@@ -376,10 +376,11 @@ function displaySpecifications() {
     const ramPrice = additionalPrice[ram] || 0;
     const storagePrice = additionalPrice[storage] || 0;
     const totalPrice = laptop.basePrice + ramPrice + storagePrice;
-    Swal.fire({
+
+ Swal.fire({
         title: 'Spesifikasi Laptop',
         html: `
-            <div style="text-align: left; font-size: 16px; line-height: 1.6;">
+            <div style="text-align: left;">
                 <strong>Brand:</strong> ${laptop.brand}<br>
                 <strong>Role:</strong> ${laptop.role}<br>
                 <strong>Segment:</strong> ${laptop.segment}<br>
@@ -395,21 +396,18 @@ function displaySpecifications() {
                 <strong>Total Price:</strong> Rp ${totalPrice.toLocaleString()}<br>
             </div>
         `,
-      icon: 'info',
-        showCancelButton: true,
+        icon: 'info',
         confirmButtonText: 'Selesai',
-        cancelButtonText: 'Batal',
         confirmButtonColor: '#28a745',
-        cancelButtonColor: '#d33',
         background: '#f8f9fa',
         width: '600px',
         padding: '20px',
         customClass: {
             title: 'font-weight-bold',
-            htmlContainer: 'text-start'
-        },
-        didOpen: () => Swal.showLoading(),
-        willClose: () => Swal.close()
+            htmlContainer: 'text-start',
+            confirmButton: 'btn-large'  // Tambahkan kelas CSS khusus untuk memperbesar tombol
+        }
     });
+    
 }
- 
+    
