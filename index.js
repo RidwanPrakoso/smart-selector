@@ -395,16 +395,21 @@ function displaySpecifications() {
                 <strong>Total Price:</strong> Rp ${totalPrice.toLocaleString()}<br>
             </div>
         `,
-        icon: 'info',
-        confirmButtonText: 'OK',
-        confirmButtonColor: '#20C997',
-        background: '#ffffff',
+      icon: 'info',
+        showCancelButton: true,
+        confirmButtonText: 'Selesai',
+        cancelButtonText: 'Batal',
+        confirmButtonColor: '#28a745',
+        cancelButtonColor: '#d33',
+        background: '#f8f9fa',
         width: '600px',
-        padding: '25px',
+        padding: '20px',
         customClass: {
-            title: 'font-weight-bold text-primary',
-            htmlContainer: 'text-start',
-            content: 'font-size-16',
+            title: 'font-weight-bold',
+            htmlContainer: 'text-start'
         },
+        didOpen: () => Swal.showLoading(),
+        willClose: () => Swal.close()
     });
-}    
+}
+ 
