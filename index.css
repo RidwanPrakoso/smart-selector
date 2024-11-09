@@ -1,128 +1,109 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #e9ecef;
-  margin: 0;
-  padding: 20px;
-  background-image: url("assets/image.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 20px;
+    background-image: url("assets/image.png") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    position: relative;
+    margin: 20px; 
 }
 
 .header {
-  display: flex;
-  justify-content: space-between; /* Mengatur ruang antara judul dan gambar */
-  align-items: center; /* Menyelaraskan gambar dan judul secara vertikal */
-  margin-bottom: 20px; /* Memberikan jarak antara header dan form */
+display: flex;
+justify-content: space-between; /* Mengatur ruang antara judul dan gambar */
+align-items: center; /* Menyelaraskan gambar dan judul secara vertikal */
 }
+.header img { width: 100px; /*Sesuaikanukurangambar*/
+    height: auto; /*Menjagaproporsigambar*/border-radius: 10%;
 
-.header img {
-  width: 100px; /* Ukuran gambar disesuaikan */
-  height: auto;
-  border-radius: 10%;
+    
 }
 
 h1 {
-  text-align: center;
-  color: #343a40;
-  margin-bottom: 20px;
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+form {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
 }
 
 label {
-  font-weight: bold;
-  margin: 10px 0 5px;
-  display: block;
-  color: #495057;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    display: block;
+    color: #495057;
 }
 
 select {
-  padding: 12px;
-  margin: 10px 0;
-  width: 100%;
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-  font-size: 16px;
-  background-color: #fff;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  outline: none;
-  appearance: none;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="%23808080"><path d="M7 10l5 5 5-5z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 16px;
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    outline: none;
+    appearance: none; /* Menghilangkan panah default di beberapa browser */
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="%23808080"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;;
 }
 
 select:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
-  outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+    outline: none;
 }
 
 button {
-  padding: 12px 15px;
-  margin: 10px 0;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 12px 15px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
-button:active {
-  transform: translateY(0);
-}
+
 
 /* Media Queries */
 /* Laptop */
 @media (max-width: 1366px) {
-  html {
+    html {
       font-size: 75%;
+    }
   }
-
-  .header img {
-      width: 90px; /* Ukuran gambar lebih kecil pada laptop */
-  }
-
-  form {
-      max-width: 90%; /* Membuat form lebih lebar di layar besar */
-  }
-}
-
-/* Tablet */
-@media (max-width: 758px) {
-  html {
+  
+  /* Tablet */
+  @media (max-width: 758px) {
+    html {
       font-size: 62.5%;
+    }
   }
-
-  .header img {
-      width: 80px; /* Ukuran gambar lebih kecil */
-  }
-
-  form {
-      max-width: 95%; /* Form lebih besar di layar tablet */
-  }
-}
-
-/* Mobile Phone */
-@media (max-width: 450px) {
-  html {
+  
+  /* Mobile Phone */
+  @media (max-width: 450px) {
+    html {
       font-size: 55%;
+    }
   }
-
-  .header img {
-      width: 70px; /* Ukuran gambar disesuaikan */
-  }
-
-  form {
-      max-width: 100%; /* Form menggunakan seluruh lebar layar pada ponsel */
-      padding: 15px; /* Menyesuaikan padding pada ukuran kecil */
-  }
-}
