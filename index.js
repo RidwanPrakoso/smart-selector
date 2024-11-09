@@ -212,7 +212,7 @@ const additionalPrice = {
 function updateModels() {
     const role = document.getElementById('role').value;
     const modelSelect = document.getElementById('model');
-    modelSelect.innerHTML = '<option value="">Select Model</option>';
+    modelSelect.innerHTML = '<option value="" disabled selected>Pilih Model</option>';
     let availableModels = [];
 
     if (role === "Pelajar") {
@@ -240,7 +240,7 @@ function updateRAMOptions() {
     const ramSelect = document.getElementById('ram');
 
     // Bersihkan opsi RAM sebelumnya
-    ramSelect.innerHTML = '<option value="">Select RAM</option>';
+    ramSelect.innerHTML = '<option value="" disabled selected>Pilih RAM</option>';
 
     let validRAMOptions = [];
 
@@ -299,7 +299,7 @@ function updateSegmentOptions() {
     const model = document.getElementById("model").value;
     const segmentSelect = document.getElementById("segment");
 
-    segmentSelect.innerHTML = '<option value="" disabled selected>-Pilih Segmen-</option>';
+    segmentSelect.innerHTML = '<option value="" disabled selected>Pilih Segmen</option>';
     let validSegments = [];
     switch (role) {
         case "Pelajar":
