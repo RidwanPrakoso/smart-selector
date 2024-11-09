@@ -542,7 +542,7 @@ function updateRAMOptions() {
             validRAMOptions = ["8GB LPDDR5", "16GB LPDDR5"];
             break;
         case "LOQ 15 RTX 2050":
-            validRAMOptions = ["12GB DDR5", "126B DDR5"];
+            validRAMOptions = ["12GB DDR5", "16GB DDR5"];
             break;
         case "Ideapad Slim 5 Light 14":
             validRAMOptions = ["8GB DDR4", "16GB DDR4"];
