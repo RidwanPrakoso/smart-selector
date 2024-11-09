@@ -587,7 +587,7 @@ function updateSegmentOptions() {
 
     // Reset pilihan segmen dan tampilkan semua segmen
     segmentSelect.innerHTML = '<option value="" disabled selected>Pilih Segmen</option>';
-    const allSegments = ["Office", "Editing", "Gaming", "Multimedia", "Outdoor", "Coding"];
+    const allSegments = ["Office", "Editing", "Gaming", "Multimedia", "Outdoor", "Coding", "3D / Render & Modeling"];
 
     // Menampilkan semua segmen di dropdown
     allSegments.forEach(segment => {
