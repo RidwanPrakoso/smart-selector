@@ -18,23 +18,23 @@
 <!-- Combo Box Peran -->
 <label for="role">Pilih Peran:</label>
 <select id="role" onchange="updateModels()">
-    <option value="" disabled selected>Pilih Peran</option>
+    <option value="" disabled selected>-Pilih Peran-</option>
     <option value="Pelajar">Pelajar</option>
-    <option value="Mahasiswa">Mahasiswa</option>
-    <option value="Karyawan">Karyawan</option>
-    <option value="Profesional">Profesional</option>
+    <option value="Pelajar, Mahasiswa">Pelajar, Mahasiswa</option>
+    <option value="Mahasiswa, Karyawan">Mahasiswa, Karyawan</option>
+    <option value="Profesional, Mahasiswa, Karyawan">Profesional, Mahasiswa, Karyawan</option>
 </select>
 
 <!-- Combo Box Model -->
 <label for="model">Pilih Model:</label>
 <select id="model" onchange="updateRAMOptions(); updateSegmentOptions(); updateProcessorOptions(); updateGPUOptions()">
-    <option value="" disabled selected>Pilih Model</option>
+    <option value="" disabled selected>-Pilih Model-</option>
 </select>
 
 <!-- Combo Box Segmen -->
 <label for="segment">Pilih Segmen:</label>
 <select id="segment">
-    <option value="" disabled selected>Pilih Segmen</option>
+    <option value="" disabled selected>-Pilih Segmen-</option>
 </select>
 
 
