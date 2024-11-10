@@ -193,6 +193,7 @@ const laptopData = {
         basePrice: 13490000
     }
 };
+
 // Harga tambahan berdasarkan RAM dan penyimpanan
 const additionalPrice = {
     "8GB DDR4": 500000,
@@ -210,36 +211,89 @@ const additionalPrice = {
 
 };
 
+// Daftar model yang valid untuk setiap role
+const validModelsForRole = {
+    "Pelajar": ["Ideapad Slim 1", "V14 G3 IAP"],
+    "Mahasiswa": ["Ideapad Slim 3"],
+    "Karyawan": ["V14 G4 RYZEN 5", "Ideapad Slim 3 14"],
+    "Profesional": [
+        "Ideapad Duet 3i 11 Touch", "IDEAPAD FLEX 5 14",
+        "LOQ 15 RTX 2050", "Ideapad Slim 5 Light 14",
+        "Ideapad Slim 5", "Ideapad Slim 5 (Gaming)", "LOQ 15 RTX 3050"
+    ]
+};
 
+// Fungsi untuk memperbarui opsi model berdasarkan role
+function updateModelOptions() {
+    const role = document.getElementById("role").value; // Mendapatkan nilai role dari dropdown
+    const modelSelect = document.getElementById("model"); // Mendapatkan elemen model dropdown
 
-
-// Fungsi untuk memperbarui daftar model berdasarkan peran
-function updateModels() {
-    const role = document.getElementById('role').value;
-    const modelSelect = document.getElementById('model');
-    modelSelect.innerHTML = '<option value="" disabled selected>Pilih Model</option>';
-    let availableModels = [];
-
-    if (role === "Pelajar") {
-        availableModels = ["Ideapad Slim 1", "V14 G3 IAP"];
-    } else if (role === "Mahasiswa") {
-        availableModels = ["Ideapad Slim 3"];
-    } else if (role === "Karyawan") {
-        availableModels = ["V14 G4 RYZEN 5", "Ideapad Slim 3 14"];
-    } else if (role === "Profesional") {
-        availableModels = [
-            "Ideapad Duet 3i 11 Touch", "IDEAPAD FLEX 5 14", 
-            "LOQ 15 RTX 2050", "Ideapad Slim 5 Light 14", 
-            "Ideapad Slim 5","Ideapad Slim 5 (Gaming)", "LOQ 15 RTX 3050"
-        ];
+    if (!role) {
+        console.error('Role tidak dipilih!');
+        return;
     }
 
-    availableModels.forEach(model => {
+    // Reset pilihan model dan tampilkan semua model
+    modelSelect.innerHTML = '<option value="" disabled selected>Pilih Model</option>';
+    const allModels = [
+        "Ideapad Slim 1", "V14 G3 IAP", "Ideapad Slim 3", "V14 G4 RYZEN 5",
+        "Ideapad Slim 3 14", "Ideapad Duet 3i 11 Touch", "IDEAPAD FLEX 5 14",
+        "LOQ 15 RTX 2050", "Ideapad Slim 5 Light 14", "Ideapad Slim 5",
+        "Ideapad Slim 5 (Gaming)", "LOQ 15 RTX 3050"
+    ];
+
+    // Menampilkan semua model di dropdown
+    allModels.forEach(model => {
         modelSelect.innerHTML += `<option value="${model}">${model}</option>`;
     });
+
+    // Menambahkan event listener untuk memeriksa kecocokan model dengan role
+    modelSelect.addEventListener("change", checkModelRole); 
 }
 
-// Fungsi untuk memperbarui pilihan RAM berdasarkan model yang dipilih
+// Fungsi untuk memeriksa apakah model sesuai dengan role yang dipilih
+function checkModelRole() {
+    const role = document.getElementById("role").value;
+    const model = document.getElementById("model").value;
+    let isValid = false;
+
+    // Pengecekan model yang valid berdasarkan role
+    if (role === "Pelajar") {
+        if (model === "Ideapad Slim 1" || model === "V14 G3 IAP") {
+            isValid = true;
+        }
+    } else if (role === "Mahasiswa") {
+        if (model === "Ideapad Slim 3") {
+            isValid = true;
+        }
+    } else if (role === "Karyawan") {
+        if (model === "V14 G4 RYZEN 5" || model === "Ideapad Slim 3 14") {
+            isValid = true;
+        }
+    } else if (role === "Profesional") {
+        if (
+            model === "Ideapad Duet 3i 11 Touch" || model === "IDEAPAD FLEX 5 14" ||
+            model === "LOQ 15 RTX 2050" || model === "Ideapad Slim 5 Light 14" ||
+            model === "Ideapad Slim 5" || model === "Ideapad Slim 5 (Gaming)" ||
+            model === "LOQ 15 RTX 3050"
+        ) {
+            isValid = true;
+        }
+    }
+
+    // Jika model tidak sesuai dengan role yang dipilih, tampilkan SweetAlert
+    if (!isValid) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Model Tidak Sesuai!',
+            text: `Model '${model}' tidak sesuai dengan role '${role}'. Pilih model yang valid untuk role tersebut.`,
+        });
+        // Reset pilihan model
+        document.getElementById("model").value = ""; // Reset pilihan ke default
+    }
+}
+
+// Fungsi untuk memperbarui opsi RAM berdasarkan model yang dipilih
 function updateRAMOptions() {
     const model = document.getElementById('model').value;
     const ramSelect = document.getElementById('ram');
@@ -270,7 +324,7 @@ function updateRAMOptions() {
             validRAMOptions = ["8GB LPDDR5", "16GB LPDDR5"];
             break;
         case "LOQ 15 RTX 2050":
-            validRAMOptions = ["12GB DDR5", "16GB DDR5"];
+            validRAMOptions = ["16GB DDR5", "12GB DDR5"];
             break;
         case "Ideapad Slim 5 Light 14":
             validRAMOptions = ["8GB DDR4", "16GB DDR4"];
@@ -288,10 +342,8 @@ function updateRAMOptions() {
     });
 }
 
-
-
-
-// Fungsi untuk memperbarui pilihan segmen berdasarkan model dan role
+// Panggil fungsi untuk memperbarui model saat role dipilih
+document.getElementById("role").addEventListener("change", updateModelOptions);
 
 // Daftar segmen untuk setiap model
 const validSegmentsForModel = {
@@ -324,12 +376,37 @@ function updateSegmentOptions() {
 }
 
 // Fungsi untuk memeriksa apakah segmen sesuai dengan model yang dipilih
-// Fungsi untuk memeriksa apakah segmen sesuai dengan model yang dipilih
 function checkSegment() {
     const model = document.getElementById("model").value;
     const segment = document.getElementById("segment").value;
+    let validSegments = [];
 
-    const validSegments = validSegmentsForModel[model] || [];
+    // Pengecekan segmen yang valid berdasarkan model menggunakan if-else if
+    if (model === "Ideapad Slim 1") {
+        validSegments = ["Office"];
+    } else if (model === "V14 G3 IAP") {
+        validSegments = ["Coding", "Office"];
+    } else if (model === "Ideapad Slim 3") {
+        validSegments = ["Coding", "Office"];
+    } else if (model === "V14 G4 RYZEN 5") {
+        validSegments = ["Coding", "Office", "Multimedia"];
+    } else if (model === "Ideapad Slim 3 14") {
+        validSegments = ["Coding", "Office", "Multimedia"];
+    } else if (model === "LOQ 15 RTX 2050") {
+        validSegments = ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"];
+    } else if (model === "Ideapad Slim 5 Light 14") {
+        validSegments = ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"];
+    } else if (model === "LOQ 15 RTX 3050") {
+        validSegments = ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"];
+    } else if (model === "Ideapad Duet 3i 11 Touch") {
+        validSegments = ["Outdoor", "Office", "Coding", "Multimedia"];
+    } else if (model === "IDEAPAD FLEX 5 14") {
+        validSegments = ["Multimedia", "Outdoor", "Office", "Editing", "Coding"];
+    } else if (model === "Ideapad Slim 5") {
+        validSegments = ["Editing", "Multimedia"];
+    } else if (model === "Ideapad Slim 5 (Gaming)") {
+        validSegments = ["Editing", "Multimedia", "Gaming"];
+    }
 
     // Jika segmen tidak sesuai dengan model yang dipilih, tampilkan SweetAlert
     if (segment && !validSegments.includes(segment)) {
@@ -394,7 +471,7 @@ function displaySpecifications() {
         confirmButtonText: 'Selesai',
         confirmButtonColor: '#28a745',
         background: '#f8f9fa',
-        width: '550px',
+        width: '600px',
         padding: '20px',
         customClass: {
             title: 'font-weight-bold',
