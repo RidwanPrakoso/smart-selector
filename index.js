@@ -13,7 +13,9 @@ const laptopData = {
         displaySpecs: "1366x768, 220 nits, 45% NTSC, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 3500000
+        basePrice: 3500000,
+        imageUrl: "/assets/IDEA SLIM1.png",
+        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-1"
     },
     "V14 G3 IAP": {
         brand: "LENOVO V14 G3 IAP",
@@ -29,7 +31,9 @@ const laptopData = {
         displaySpecs: "1920x1080p, 250 nits, 45% NTSC, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 4000000
+        basePrice: 4000000,
+        imageUrl: "/assets/v14 g3.png",
+        shopeeUrl: "https://shopee.co.id/V14-G3-IAP"
     },
     "Ideapad Slim 3": {
         brand: "LENOVO Ideapad Slim 3",
@@ -45,7 +49,9 @@ const laptopData = {
         displaySpecs: "1920x1080p, 250 nits, 45% NTSC, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 5000000
+        basePrice: 5000000,
+        imageUrl: "/assets/SLIM 3 I3.png",
+        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-3"
     },
     "V14 G4 RYZEN 5": {
         brand: "LENOVO V14 G4 RYZEN 5",
@@ -61,7 +67,9 @@ const laptopData = {
         displaySpecs: "1920x1080p, 300 nits, 45% NTSC, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 7549000
+        basePrice: 7549000,
+        imageUrl: "/assets/V14 G4.png",
+        shopeeUrl: "https://shopee.co.id/V14-G4-RYZEN-5"
     },
     "Ideapad Slim 3 14": {
         brand: "LENOVO Ideapad Slim 3 14",
@@ -77,7 +85,9 @@ const laptopData = {
         displaySpecs: "1920x1080p, 300 nits, 45% NTSC, 60Hz",
         note: "Sudah mendukung Full Function Type C\nSudah menggunakan DDR5",
         considerations: "",
-        basePrice: 8279000
+        basePrice: 8279000,
+        imageUrl: "/assets/SLIM3.png",
+        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-3-14"
     },
     "Ideapad Duet 3i 11 Touch": {
         brand: "LENOVO Ideapad Duet 3i 11 Touch",
@@ -93,7 +103,9 @@ const laptopData = {
         displaySpecs: "2000x1200p, 400 nits, 97.5% DCI-P3, 60Hz, Touch Screen",
         note: "Laptop yang lebih cocok untuk penggunaan entertainment:\n- Menggunakan DDR5\n- Layar Sentuh, Akurasi warna bagus, 2K dan terang untuk dibawa keluar rumah",
         considerations: "Masih menggunakan Celeron",
-        basePrice: 8999000
+        basePrice: 8999000,
+        imageUrl: "/assets/IDEAPAD 3I.png",
+        shopeeUrl: "https://shopee.co.id/Ideapad-Duet-3i-11-Touch"
     },
     "IDEAPAD FLEX 5 14": {
         brand: "LENOVO IDEAPAD FLEX 5 14",
@@ -109,7 +121,9 @@ const laptopData = {
         displaySpecs: "1920x1200p, 300 nits, 45% NTSC, 60Hz, Touch Screen",
         note: "",
         considerations: "",
-        basePrice: 10249000
+        basePrice: 10249000,
+        imageUrl: "/assets/FLEX5.png",
+        shopeeUrl: "https://shopee.co.id/IDEAPAD-FLEX-5-14"
     },
     "LOQ 15 RTX 2050": {
         brand: "LENOVO LOQ 15 RTX 2050",
@@ -125,7 +139,9 @@ const laptopData = {
         displaySpecs: "1920x1080p, 300 nits, 100% SRGB, 144Hz",
         note: "",
         considerations: "",
-        basePrice: 10749000
+        basePrice: 10749000,
+        imageUrl: "/assets/LOQ2050.png",
+        shopeeUrl: "https://shopee.co.id/LOQ-15-RTX-2050"
     },
     "Ideapad Slim 5 Light 14": {
         brand: "LENOVO Ideapad Slim 5 Light 14",
@@ -141,7 +157,9 @@ const laptopData = {
         displaySpecs: "1920x1080p, 300 nits, 100% SRGB, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 10949000
+        basePrice: 10949000,
+        imageUrl: "/assets/SLIM 5 LIGHT.png",
+        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-5-Light-14"
     },
     "Ideapad Slim 5": {
         brand: "LENOVO Ideapad Slim 5",
@@ -157,7 +175,9 @@ const laptopData = {
         displaySpecs: "1920x1200p, 400 nits, 100% DCI-P3, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 11299000
+        basePrice: 11299000,
+        imageUrl: "/assets/SLIM5.png",
+        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-5"
     },
     "Ideapad Slim 5 (Gaming)": {
         brand: "LENOVO Ideapad Slim 5 (Gaming)",
@@ -173,7 +193,9 @@ const laptopData = {
         displaySpecs: "1920x1200p, 400 nits, 100% DCI-P3, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 12199000
+        basePrice: 12199000,
+        imageUrl: "/assets/SLIM5.png",
+        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-5-Gaming"
     },
     "LOQ 15 RTX 3050": {
         brand: "LENOVO LOQ 15 RTX 3050",
@@ -189,7 +211,9 @@ const laptopData = {
         displaySpecs: "1920x1080p, 300 nits, 100% SRGB, 144Hz",
         note: "",
         considerations: "",
-        basePrice: 13490000
+        basePrice: 13490000,
+        imageUrl: "/assets/LOQ 3050.png",
+        shopeeUrl: "https://shopee.co.id/LOQ-15-RTX-3050"
     }
 };
 
@@ -369,35 +393,44 @@ function displaySpecifications() {
     const storagePrice = additionalPrice[storage] || 0;
     const totalPrice = laptop.basePrice + ramPrice + storagePrice;
 
-    Swal.fire({
+   Swal.fire({
         title: 'Spesifikasi Laptop',
         html: `
             <div style="text-align: left;">
-                <strong>Brand:</strong> ${laptop.brand}<br>
-                <strong>Role:</strong> ${laptop.role}<br>
-                <strong>Segment:</strong> ${segment}<br> <!-- Tampilkan hanya segmen yang dipilih -->
-                <strong>Processor:</strong> ${laptop.processor}<br>
-                <strong>GPU:</strong> ${laptop.gpu}<br>
-                <strong>Panel:</strong> ${laptop.panel}<br>
-                <strong>RAM:</strong> ${ram}<br>
-                <strong>Storage:</strong> ${storage}<br>
-                <strong>Display Size:</strong> ${laptop.displaySize}<br>
-                <strong>Display Specs:</strong> ${laptop.displaySpecs}<br>
-                <strong>Note:</strong> ${laptop.note || 'N/A'}<br>
-                <strong>Considerations:</strong> ${laptop.considerations || 'N/A'}<br>
-                <strong>Total Price:</strong> Rp ${totalPrice.toLocaleString()}<br>
+                <img src="${laptop.imageUrl}" alt="${model}" 
+                     style="width:100%; max-width: 200px; height:auto; display: block; margin: 0 auto 10px; border-radius: 6px;">
+                <p style="font-size: 1em; line-height: 1.3; color: #333; margin: 0;">
+                    <strong>Brand:</strong> ${laptop.brand}<br>
+                    <strong>Role:</strong> ${laptop.role}<br>
+                    <strong>Segment:</strong> ${segment}<br>
+                    <strong>Processor:</strong> ${laptop.processor}<br>
+                    <strong>GPU:</strong> ${laptop.gpu}<br>
+                    <strong>Panel:</strong> ${laptop.panel}<br>
+                    <strong>RAM:</strong> ${ram}<br>
+                    <strong>Storage:</strong> ${storage}<br>
+                    <strong>Display Size:</strong> ${laptop.displaySize}<br>
+                    <strong>Display Specs:</strong> ${laptop.displaySpecs}<br>
+                    <strong>Note:</strong> ${laptop.note || 'N/A'}<br>
+                    <strong>Considerations:</strong> ${laptop.considerations || 'N/A'}<br>
+                    <strong>Total Price:</strong> Rp ${totalPrice.toLocaleString()}<br>
+                </p>
+                <div style="text-align: center; margin-top: 15px;">
+                    <a href="${laptop.shopeeUrl}" target="_blank" style="color: #ffffff; background-color: #fa3c4c; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
+                        Beli di Shopee
+                    </a>
+                </div>
             </div>
         `,
         icon: 'info',
         confirmButtonText: 'Selesai',
         confirmButtonColor: '#28a745',
         background: '#f8f9fa',
-        width: '600px',
-        padding: '20px',
+        width: '450px', 
+        padding: '15px',
         customClass: {
             title: 'font-weight-bold',
             htmlContainer: 'text-start',
-            confirmButton: 'btn-large'
+            confirmButton: 'btn-small'
         }
     });
-}
+}    
