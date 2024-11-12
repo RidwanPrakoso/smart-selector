@@ -14,7 +14,8 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 3500000,
-        imageUrl: "/assets/IDEA SLIM1.png"
+        imageUrl: "/assets/IDEA SLIM1.png",
+        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-1"
     },
     "V14 G3 IAP": {
         brand: "LENOVO V14 G3 IAP",
@@ -31,7 +32,8 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 4000000,
-        imageUrl: "/assets/v14 g3.png"
+        imageUrl: "/assets/v14 g3.png",
+        shopeeUrl: "https://shopee.co.id/V14-G3-IAP"
     },
     "Ideapad Slim 3": {
         brand: "LENOVO Ideapad Slim 3",
@@ -48,7 +50,8 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 5000000,
-        imageUrl: "/assets/SLIM 3 I3.png"
+        imageUrl: "/assets/SLIM 3 I3.png",
+        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-3"
     },
     "V14 G4 RYZEN 5": {
         brand: "LENOVO V14 G4 RYZEN 5",
@@ -65,7 +68,8 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 7549000,
-        imageUrl: "/assets/V14 G4.png"
+        imageUrl: "/assets/V14 G4.png",
+        shopeeUrl: "https://shopee.co.id/V14-G4-RYZEN-5"
     },
     "Ideapad Slim 3 14": {
         brand: "LENOVO Ideapad Slim 3 14",
@@ -82,7 +86,8 @@ const laptopData = {
         note: "Sudah mendukung Full Function Type C\nSudah menggunakan DDR5",
         considerations: "",
         basePrice: 8279000,
-        imageUrl: "/assets/SLIM3.png"
+        imageUrl: "/assets/SLIM3.png",
+        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-3-14"
     },
     "Ideapad Duet 3i 11 Touch": {
         brand: "LENOVO Ideapad Duet 3i 11 Touch",
@@ -99,7 +104,8 @@ const laptopData = {
         note: "Laptop yang lebih cocok untuk penggunaan entertainment:\n- Menggunakan DDR5\n- Layar Sentuh, Akurasi warna bagus, 2K dan terang untuk dibawa keluar rumah",
         considerations: "Masih menggunakan Celeron",
         basePrice: 8999000,
-        imageUrl: "/assets/IDEAPAD 3I.png"
+        imageUrl: "/assets/IDEAPAD 3I.png",
+        shopeeUrl: "https://shopee.co.id/Ideapad-Duet-3i-11-Touch"
     },
     "IDEAPAD FLEX 5 14": {
         brand: "LENOVO IDEAPAD FLEX 5 14",
@@ -116,7 +122,8 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 10249000,
-        imageUrl: "/assets/FLEX5.png"
+        imageUrl: "/assets/FLEX5.png",
+        shopeeUrl: "https://shopee.co.id/IDEAPAD-FLEX-5-14"
     },
     "LOQ 15 RTX 2050": {
         brand: "LENOVO LOQ 15 RTX 2050",
@@ -133,7 +140,8 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 10749000,
-        imageUrl: "/assets/LOQ2050.png"
+        imageUrl: "/assets/LOQ2050.png",
+        shopeeUrl: "https://shopee.co.id/LOQ-15-RTX-2050"
     },
     "Ideapad Slim 5 Light 14": {
         brand: "LENOVO Ideapad Slim 5 Light 14",
@@ -150,7 +158,8 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 10949000,
-        imageUrl: "/assets/SLIM 5 LIGHT.png"
+        imageUrl: "/assets/SLIM 5 LIGHT.png",
+        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-5-Light-14"
     },
     "Ideapad Slim 5": {
         brand: "LENOVO Ideapad Slim 5",
@@ -167,7 +176,8 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 11299000,
-        imageUrl: "/assets/SLIM5.png"
+        imageUrl: "/assets/SLIM5.png",
+        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-5"
     },
     "Ideapad Slim 5 (Gaming)": {
         brand: "LENOVO Ideapad Slim 5 (Gaming)",
@@ -184,7 +194,8 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 12199000,
-        imageUrl: "/assets/SLIM5.png"
+        imageUrl: "/assets/SLIM5.png",
+        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-5-Gaming"
     },
     "LOQ 15 RTX 3050": {
         brand: "LENOVO LOQ 15 RTX 3050",
@@ -201,7 +212,8 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 13490000,
-        imageUrl: "/assets/LOQ 3050.png"
+        imageUrl: "/assets/LOQ 3050.png",
+        shopeeUrl: "https://shopee.co.id/LOQ-15-RTX-3050"
     }
 };
 
@@ -223,87 +235,36 @@ const additionalPrice = {
 
 };
 
-// Daftar model yang valid untuk setiap role
-const validModelsForRole = {
-    "Pelajar": ["Ideapad Slim 1", "V14 G3 IAP"],
-    "Mahasiswa": ["Ideapad Slim 3"],
-    "Karyawan": ["V14 G4 RYZEN 5", "Ideapad Slim 3 14"],
-    "Profesional": [
-        "Ideapad Duet 3i 11 Touch", "IDEAPAD FLEX 5 14",
-        "LOQ 15 RTX 2050", "Ideapad Slim 5 Light 14",
-        "Ideapad Slim 5", "Ideapad Slim 5 (Gaming)", "LOQ 15 RTX 3050"
-    ]
-};
 
-// Fungsi untuk memperbarui opsi model berdasarkan role
-function updateModelOptions() {
-    const role = document.getElementById("role").value; // Mendapatkan nilai role dari dropdown
-    const modelSelect = document.getElementById("model"); // Mendapatkan elemen model dropdown
 
-    if (!role) {
-        console.error('Role tidak dipilih!');
-        return;
+
+// Fungsi untuk memperbarui daftar model berdasarkan peran
+function updateModels() {
+    const role = document.getElementById('role').value;
+    const modelSelect = document.getElementById('model');
+    modelSelect.innerHTML = '<option value="" disabled selected>Pilih Model</option>';
+    let availableModels = [];
+
+    if (role === "Pelajar") {
+        availableModels = ["Ideapad Slim 1", "V14 G3 IAP"];
+    } else if (role === "Mahasiswa") {
+        availableModels = ["Ideapad Slim 3"];
+    } else if (role === "Karyawan") {
+        availableModels = ["V14 G4 RYZEN 5", "Ideapad Slim 3 14"];
+    } else if (role === "Profesional") {
+        availableModels = [
+            "Ideapad Duet 3i 11 Touch", "IDEAPAD FLEX 5 14", 
+            "LOQ 15 RTX 2050", "Ideapad Slim 5 Light 14", 
+            "Ideapad Slim 5","Ideapad Slim 5 (Gaming)", "LOQ 15 RTX 3050"
+        ];
     }
 
-    // Reset pilihan model dan tampilkan semua model
-    modelSelect.innerHTML = '<option value="" disabled selected>Pilih Model</option>';
-    const allModels = [
-        "Ideapad Slim 1", "V14 G3 IAP", "Ideapad Slim 3", "V14 G4 RYZEN 5",
-        "Ideapad Slim 3 14", "Ideapad Duet 3i 11 Touch", "IDEAPAD FLEX 5 14",
-        "LOQ 15 RTX 2050", "Ideapad Slim 5 Light 14", "Ideapad Slim 5",
-        "Ideapad Slim 5 (Gaming)", "LOQ 15 RTX 3050"
-    ];
-
-    // Menampilkan semua model di dropdown
-    allModels.forEach(model => {
+    availableModels.forEach(model => {
         modelSelect.innerHTML += `<option value="${model}">${model}</option>`;
     });
-
-    // Menambahkan event listener untuk memeriksa kecocokan model dengan role
-    modelSelect.addEventListener("change", checkModelRole); 
 }
 
-// Fungsi untuk memeriksa apakah model sesuai dengan role yang dipilih
-function checkModelRole() {
-    const role = document.getElementById("role").value;
-    const model = document.getElementById("model").value;
-
-    // Pengecekan model yang valid berdasarkan role
-    if (role === "Pelajar") {
-        if (model === "Ideapad Slim 1" || model === "V14 G3 IAP") {
-            isValid = true;
-        }
-    } else if (role === "Mahasiswa") {
-        if (model === "Ideapad Slim 3") {
-            isValid = true;
-        }
-    } else if (role === "Karyawan") {
-        if (model === "V14 G4 RYZEN 5" || model === "Ideapad Slim 3 14") {
-            isValid = true;
-        }
-    } else if (role === "Profesional") {
-        if (
-            model === "Ideapad Duet 3i 11 Touch" || model === "IDEAPAD FLEX 5 14" ||
-            model === "LOQ 15 RTX 2050" || model === "Ideapad Slim 5 Light 14" ||
-            model === "Ideapad Slim 5" || model === "Ideapad Slim 5 (Gaming)" ||
-            model === "LOQ 15 RTX 3050"
-        ) {
-            isValid = true;
-        }
-    }
-
-    // Jika model tidak sesuai dengan role yang dipilih, tampilkan SweetAlert
-    if (!isValid) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Model Tidak Sesuai!',
-            text: `Model '${model}' tidak sesuai dengan role '${role}'. Pilih model yang valid untuk role tersebut.`,
-        });
-       
-    }
-}
-
-// Fungsi untuk memperbarui opsi RAM berdasarkan model yang dipilih
+// Fungsi untuk memperbarui pilihan RAM berdasarkan model yang dipilih
 function updateRAMOptions() {
     const model = document.getElementById('model').value;
     const ramSelect = document.getElementById('ram');
@@ -352,143 +313,79 @@ function updateRAMOptions() {
     });
 }
 
-// Panggil fungsi untuk memperbarui model saat role dipilih
-document.getElementById("role").addEventListener("change", updateModelOptions);
 
-// Daftar segmen untuk setiap model
-const validSegmentsForModel = {
-    "Ideapad Slim 1": ["Office"],
-    "V14 G3 IAP": ["Coding", "Office"],
-    "Ideapad Slim 3": ["Coding", "Office"],
-    "V14 G4 RYZEN 5": ["Coding", "Office", "Multimedia"],
-    "Ideapad Slim 3 14": ["Coding", "Office", "Multimedia"],
-    "LOQ 15 RTX 2050": ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"],
-    "Ideapad Slim 5 Light 14": ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"],
-    "LOQ 15 RTX 3050": ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"],
-    "Ideapad Duet 3i 11 Touch": ["Outdoor", "Office", "Coding", "Multimedia"],
-    "IDEAPAD FLEX 5 14": ["Multimedia", "Outdoor", "Office", "Editing", "Coding"],
-    "Ideapad Slim 5": ["Editing", "Multimedia"],
-    "Ideapad Slim 5 (Gaming)": ["Editing", "Multimedia", "Gaming"]
-};
 
-// Fungsi untuk memperbarui opsi segmen
+
+// Fungsi untuk memperbarui pilihan segmen berdasarkan model dan role
+
 function updateSegmentOptions() {
+    const role = document.getElementById("role").value;
+    const model = document.getElementById("model").value;
     const segmentSelect = document.getElementById("segment");
 
-    // Reset pilihan segmen dan tampilkan semua segmen
     segmentSelect.innerHTML = '<option value="" disabled selected>Pilih Segmen</option>';
-    const allSegments = ["Office", "Editing", "Gaming", "Multimedia", "Outdoor", "Coding", "3D / Render & Modeling"];
+    let validSegments = [];
 
-    // Menampilkan semua segmen di dropdown
-    allSegments.forEach(segment => {
+    switch (role) {
+        case "Pelajar":
+            if (model === "Ideapad Slim 1") {
+                validSegments = ["Office"];
+            } else if (model === "V14 G3 IAP") {
+                validSegments = ["Coding", "Office"];
+            }
+            break;
+
+        case "Mahasiswa":
+            if (model === "Ideapad Slim 3") {
+                validSegments = ["Coding", "Office"];
+            }
+            break;
+
+        case "Karyawan":
+            if (model === "V14 G4 RYZEN 5" || model === "Ideapad Slim 3 14") {
+                validSegments = ["Coding", "Office", "Multimedia"];
+            }
+            break;
+
+        case "Profesional":
+            if (model === "LOQ 15 RTX 2050" || model === "Ideapad Slim 5 Light 14" || model === "LOQ 15 RTX 3050") {
+                validSegments = ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"];
+            } else if (model === "Ideapad Duet 3i 11 Touch") {
+                validSegments = ["Outdoor", "Office", "Coding", "Multimedia"];
+            } else if (model === "IDEAPAD FLEX 5 14") {
+                validSegments = ["Multimedia", "Outdoor", "Office", "Editing", "Coding"];
+            } else if (model === "Ideapad Slim 5") {
+                validSegments = ["Editing", "Multimedia"];
+            } else if (model === "Ideapad Slim 5 (Gaming)") {
+                validSegments = ["Editing", "Multimedia", "Gaming"];
+            }
+            break;
+    }
+
+    validSegments = [...new Set(validSegments)];  // Menghilangkan duplikat jika ada
+
+    validSegments.forEach(segment => {
         segmentSelect.innerHTML += `<option value="${segment}">${segment}</option>`;
     });
 }
 
-// Fungsi untuk memeriksa apakah segmen sesuai dengan model yang dipilih
-function checkSegment() {
-    const model = document.getElementById("model").value;
-    const segment = document.getElementById("segment").value;
-    let validSegments = [];
 
-    // Pengecekan segmen yang valid berdasarkan model menggunakan if-else if
-    if (model === "Ideapad Slim 1") {
-        validSegments = ["Office"];
-    } else if (model === "V14 G3 IAP") {
-        validSegments = ["Coding", "Office"];
-    } else if (model === "Ideapad Slim 3") {
-        validSegments = ["Coding", "Office"];
-    } else if (model === "V14 G4 RYZEN 5") {
-        validSegments = ["Coding", "Office", "Multimedia"];
-    } else if (model === "Ideapad Slim 3 14") {
-        validSegments = ["Coding", "Office", "Multimedia"];
-    } else if (model === "LOQ 15 RTX 2050") {
-        validSegments = ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"];
-    } else if (model === "Ideapad Slim 5 Light 14") {
-        validSegments = ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"];
-    } else if (model === "LOQ 15 RTX 3050") {
-        validSegments = ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"];
-    } else if (model === "Ideapad Duet 3i 11 Touch") {
-        validSegments = ["Outdoor", "Office", "Coding", "Multimedia"];
-    } else if (model === "IDEAPAD FLEX 5 14") {
-        validSegments = ["Multimedia", "Outdoor", "Office", "Editing", "Coding"];
-    } else if (model === "Ideapad Slim 5") {
-        validSegments = ["Editing", "Multimedia"];
-    } else if (model === "Ideapad Slim 5 (Gaming)") {
-        validSegments = ["Editing", "Multimedia", "Gaming"];
-    }
 
-    // Jika segmen tidak sesuai dengan model yang dipilih, tampilkan SweetAlert
-    if (segment && !validSegments.includes(segment)) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Segmen Tidak Sesuai!',
-            text: `Segmen '${segment}' tidak sesuai dengan model '${model}'. Pilih segmen yang valid.`,
-        });
- // Reset segment ke pilihan pertama
-        document.getElementById("segment").selectedIndex = 0;
-        
-        return false; // Menghentikan proses lebih lanjut
-    }
-    return true; // Jika segmen sesuai
-}
 
-// Fungsi untuk menampilkan spesifikasi laptop
-// Fungsi untuk menampilkan spesifikasi laptop
 function displaySpecifications() {
-    // Ambil nilai dari semua elemen select
-    const role = document.getElementById("role").value;
-    const model = document.getElementById("model").value;
-    const segment = document.getElementById("segment").value;
-    const ram = document.getElementById("ram").value;
-    const storage = document.getElementById("storage").value;
+    const role = document.getElementById('role').value;
+    const model = document.getElementById('model').value;
+    const segment = document.getElementById('segment').value;
+    const ram = document.getElementById('ram').value;
+    const storage = document.getElementById('storage').value;
 
-    let isValid = false;
-
-    // Validasi berdasarkan role dan model yang sesuai
-    if (role === "Pelajar") {
-        if (model === "Ideapad Slim 1" || model === "V14 G3 IAP") {
-            isValid = true;
-        }
-    } else if (role === "Mahasiswa") {
-        if (model === "Ideapad Slim 3") {
-            isValid = true;
-        }
-    } else if (role === "Karyawan") {
-        if (model === "V14 G4 RYZEN 5" || model === "Ideapad Slim 3 14") {
-            isValid = true;
-        }
-    } else if (role === "Profesional") {
-        if (
-            model === "Ideapad Duet 3i 11 Touch" || model === "IDEAPAD FLEX 5 14" ||
-            model === "LOQ 15 RTX 2050" || model === "Ideapad Slim 5 Light 14" ||
-            model === "Ideapad Slim 5" || model === "Ideapad Slim 5 (Gaming)" ||
-            model === "LOQ 15 RTX 3050"
-        ) {
-            isValid = true;
-        }
-    }
-
-    // Jika model tidak valid, tampilkan SweetAlert dan hentikan eksekusi
-    if (!isValid) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Model Tidak Sesuai',
-            text: `Model '${model}' tidak sesuai dengan Role '${role}'. Harap pilih model yang sesuai.`,
-            confirmButtonColor: '#007bff',
-        });
-        return; // Menghentikan eksekusi jika model tidak valid
-    }
-
-    // Validasi jika ada pilihan yang kosong
     if (!role || !model || !segment || !ram || !storage) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Semua pilihan harus diisi!',
-            confirmButtonColor: '#007bff',
+            text: 'Mohon pilih semua opsi sebelum menampilkan spesifikasi.'
         });
-        return; // Menghentikan eksekusi jika ada pilihan yang kosong
+        return;
     }
 
     const laptop = laptopData[model];
@@ -517,14 +414,19 @@ function displaySpecifications() {
                     <strong>Considerations:</strong> ${laptop.considerations || 'N/A'}<br>
                     <strong>Total Price:</strong> Rp ${totalPrice.toLocaleString()}<br>
                 </p>
+                <div style="text-align: center; margin-top: 15px;">
+                    <a href="${laptop.shopeeUrl}" target="_blank" style="color: #ffffff; background-color: #fa3c4c; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
+                        Beli di Shopee
+                    </a>
+                </div>
             </div>
         `,
         icon: 'info',
         confirmButtonText: 'Selesai',
         confirmButtonColor: '#28a745',
         background: '#f8f9fa',
-        width: '450px', // Lebar SweetAlert disesuaikan agar tidak terlalu besar
-        padding: '15px', // Padding dikurangi untuk tampilan yang lebih ringkas
+        width: '450px', 
+        padding: '15px',
         customClass: {
             title: 'font-weight-bold',
             htmlContainer: 'text-start',
