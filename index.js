@@ -15,7 +15,7 @@ const laptopData = {
         considerations: "",
         basePrice: 3500000,
         imageUrl: "/assets/IDEA SLIM1.png",
-        shopeeUrl: "https://shopee.co.id/Notebook-Lenovo-Idea-Pad-Slim-1-14-N4020-8-512-W11-Ohs-Grey-i.4443459.27412854179?sp_atk=ac304a1e-9c48-4a02-abe5-5db61e7f34cd&xptdk=ac304a1e-9c48-4a02-abe5-5db61e7f34cd
+        shopeeUrl: "https://shopee.co.id/Notebook-Lenovo-Idea-Pad-Slim-1-14-N4020-8-512-W11-Ohs-Grey-i.4443459.27412854179?sp_atk=ac304a1e-9c48-4a02-abe5-5db61e7f34cd&xptdk=ac304a1e-9c48-4a02-abe5-5db61e7f34cd"
     },
     "V14 G3 IAP": {
         brand: "LENOVO V14 G3 IAP",
@@ -437,3 +437,4 @@ Swal.fire({
 // Event listener untuk tombol "Selesai"
 document.getElementById("finishButton").addEventListener("click", () => Swal.close());
 
+}
