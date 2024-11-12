@@ -13,7 +13,7 @@ const laptopData = {
         displaySpecs: "1366x768, 220 nits, 45% NTSC, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 3500000 // Harga dasar
+        basePrice: 3500000,
         imageUrl: "/assets/IDEA SLIM1.png"
     },
     "V14 G3 IAP": {
@@ -30,7 +30,7 @@ const laptopData = {
         displaySpecs: "1920x1080p, 250 nits, 45% NTSC, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 4000000 // Harga dasar
+        basePrice: 4000000,
         imageUrl: "/assets/v14 g3.png"
     },
     "Ideapad Slim 3": {
@@ -47,7 +47,7 @@ const laptopData = {
         displaySpecs: "1920x1080p, 250 nits, 45% NTSC, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 5000000
+        basePrice: 5000000,
         imageUrl: "/assets/SLIM 3 I3.png"
     },
     "V14 G4 RYZEN 5": {
@@ -64,7 +64,7 @@ const laptopData = {
         displaySpecs: "1920x1080p, 300 nits, 45% NTSC, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 7549000
+        basePrice: 7549000,
         imageUrl: "/assets/V14 G4.png"
     },
     "Ideapad Slim 3 14": {
@@ -81,7 +81,7 @@ const laptopData = {
         displaySpecs: "1920x1080p, 300 nits, 45% NTSC, 60Hz",
         note: "Sudah mendukung Full Function Type C\nSudah menggunakan DDR5",
         considerations: "",
-        basePrice: 8279000
+        basePrice: 8279000,
         imageUrl: "/assets/SLIM3.png"
     },
     "Ideapad Duet 3i 11 Touch": {
@@ -98,9 +98,8 @@ const laptopData = {
         displaySpecs: "2000x1200p, 400 nits, 97.5% DCI-P3, 60Hz, Touch Screen",
         note: "Laptop yang lebih cocok untuk penggunaan entertainment:\n- Menggunakan DDR5\n- Layar Sentuh, Akurasi warna bagus, 2K dan terang untuk dibawa keluar rumah",
         considerations: "Masih menggunakan Celeron",
-        basePrice: 8999000
+        basePrice: 8999000,
         imageUrl: "/assets/IDEAPAD 3I.png"
-
     },
     "IDEAPAD FLEX 5 14": {
         brand: "LENOVO IDEAPAD FLEX 5 14",
@@ -116,7 +115,7 @@ const laptopData = {
         displaySpecs: "1920x1200p, 300 nits, 45% NTSC, 60Hz, Touch Screen",
         note: "",
         considerations: "",
-        basePrice: 10249000
+        basePrice: 10249000,
         imageUrl: "/assets/FLEX5.png"
     },
     "LOQ 15 RTX 2050": {
@@ -133,7 +132,7 @@ const laptopData = {
         displaySpecs: "1920x1080p, 300 nits, 100% SRGB, 144Hz",
         note: "",
         considerations: "",
-        basePrice: 10749000
+        basePrice: 10749000,
         imageUrl: "/assets/LOQ2050.png"
     },
     "Ideapad Slim 5 Light 14": {
@@ -150,7 +149,7 @@ const laptopData = {
         displaySpecs: "1920x1080p, 300 nits, 100% SRGB, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 10949000
+        basePrice: 10949000,
         imageUrl: "/assets/SLIM 5 LIGHT.png"
     },
     "Ideapad Slim 5": {
@@ -167,7 +166,7 @@ const laptopData = {
         displaySpecs: "1920x1200p, 400 nits, 100% DCI-P3, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 11299000
+        basePrice: 11299000,
         imageUrl: "/assets/SLIM5.png"
     },
     "Ideapad Slim 5 (Gaming)": {
@@ -184,9 +183,8 @@ const laptopData = {
         displaySpecs: "1920x1200p, 400 nits, 100% DCI-P3, 60Hz",
         note: "",
         considerations: "",
-        basePrice: 12199000
+        basePrice: 12199000,
         imageUrl: "/assets/SLIM5.png"
-   
     },
     "LOQ 15 RTX 3050": {
         brand: "LENOVO LOQ 15 RTX 3050",
@@ -194,18 +192,19 @@ const laptopData = {
         segment: ["3D / Render & Modeling", "Coding", "Editing", "Office", "Gaming", "Multimedia"],
         material: "Full ABS Plastic",
         keyboardBacklight: "White LED",
-        processor: "Core i5 12450H",
+        processor: "Core i5 13420H",
         gpu: "RTX 3050 6GB",
         panel: "IPS",
         storage: "",
         displaySize: "15.6\"",
-        displaySpecs: "1920x1080p, 300 nits, 100% SRGB, 60Hz",
+        displaySpecs: "1920x1080p, 300 nits, 100% SRGB, 144Hz",
         note: "",
         considerations: "",
-        basePrice: 13490000
+        basePrice: 13490000,
         imageUrl: "/assets/LOQ 3050.png"
     }
 };
+
 
 // Harga tambahan berdasarkan RAM dan penyimpanan
 const additionalPrice = {
@@ -335,7 +334,7 @@ function updateRAMOptions() {
             validRAMOptions = ["8GB LPDDR5", "16GB LPDDR5"];
             break;
         case "LOQ 15 RTX 2050":
-            validRAMOptions = ["12GB DDR5", "16GB DDR5"];
+            validRAMOptions = ["16GB DDR5", "12GB DDR5"];
             break;
         case "Ideapad Slim 5 Light 14":
             validRAMOptions = ["8GB DDR4", "16GB DDR4"];
@@ -434,6 +433,7 @@ function checkSegment() {
     return true; // Jika segmen sesuai
 }
 
+// Fungsi untuk menampilkan spesifikasi laptop
 // Fungsi untuk menampilkan spesifikasi laptop
 function displaySpecifications() {
     // Ambil nilai dari semua elemen select
