@@ -14,6 +14,7 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 3500000 // Harga dasar
+        imageUrl: "/assets/IDEA SLIM1.png"
     },
     "V14 G3 IAP": {
         brand: "LENOVO V14 G3 IAP",
@@ -30,6 +31,7 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 4000000 // Harga dasar
+        imageUrl: "/assets/v14 g3.png"
     },
     "Ideapad Slim 3": {
         brand: "LENOVO Ideapad Slim 3",
@@ -46,6 +48,7 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 5000000
+        imageUrl: "/assets/SLIM 3 I3.png"
     },
     "V14 G4 RYZEN 5": {
         brand: "LENOVO V14 G4 RYZEN 5",
@@ -62,6 +65,7 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 7549000
+        imageUrl: "/assets/V14 G4.png"
     },
     "Ideapad Slim 3 14": {
         brand: "LENOVO Ideapad Slim 3 14",
@@ -78,6 +82,7 @@ const laptopData = {
         note: "Sudah mendukung Full Function Type C\nSudah menggunakan DDR5",
         considerations: "",
         basePrice: 8279000
+        imageUrl: "/assets/SLIM3.png"
     },
     "Ideapad Duet 3i 11 Touch": {
         brand: "LENOVO Ideapad Duet 3i 11 Touch",
@@ -94,6 +99,8 @@ const laptopData = {
         note: "Laptop yang lebih cocok untuk penggunaan entertainment:\n- Menggunakan DDR5\n- Layar Sentuh, Akurasi warna bagus, 2K dan terang untuk dibawa keluar rumah",
         considerations: "Masih menggunakan Celeron",
         basePrice: 8999000
+        imageUrl: "/assets/IDEAPAD 3I.png"
+
     },
     "IDEAPAD FLEX 5 14": {
         brand: "LENOVO IDEAPAD FLEX 5 14",
@@ -110,6 +117,7 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 10249000
+        imageUrl: "/assets/FLEX5.png"
     },
     "LOQ 15 RTX 2050": {
         brand: "LENOVO LOQ 15 RTX 2050",
@@ -126,6 +134,7 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 10749000
+        imageUrl: "/assets/LOQ2050.png"
     },
     "Ideapad Slim 5 Light 14": {
         brand: "LENOVO Ideapad Slim 5 Light 14",
@@ -142,6 +151,7 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 10949000
+        imageUrl: "/assets/SLIM 5 LIGHT.png"
     },
     "Ideapad Slim 5": {
         brand: "LENOVO Ideapad Slim 5",
@@ -158,6 +168,7 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 11299000
+        imageUrl: "/assets/SLIM5.png"
     },
     "Ideapad Slim 5 (Gaming)": {
         brand: "LENOVO Ideapad Slim 5 (Gaming)",
@@ -174,6 +185,7 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 12199000
+        imageUrl: "/assets/SLIM5.png"
    
     },
     "LOQ 15 RTX 3050": {
@@ -191,6 +203,7 @@ const laptopData = {
         note: "",
         considerations: "",
         basePrice: 13490000
+        imageUrl: "/assets/LOQ 3050.png"
     }
 };
 
@@ -487,31 +500,35 @@ function displaySpecifications() {
         title: 'Spesifikasi Laptop',
         html: `
             <div style="text-align: left;">
-                <strong>Brand:</strong> ${laptop.brand}<br>
-                <strong>Role:</strong> ${laptop.role}<br>
-                <strong>Segment:</strong> ${segment}<br> <!-- Tampilkan hanya segmen yang dipilih -->
-                <strong>Processor:</strong> ${laptop.processor}<br>
-                <strong>GPU:</strong> ${laptop.gpu}<br>
-                <strong>Panel:</strong> ${laptop.panel}<br>
-                <strong>RAM:</strong> ${ram}<br>
-                <strong>Storage:</strong> ${storage}<br>
-                <strong>Display Size:</strong> ${laptop.displaySize}<br>
-                <strong>Display Specs:</strong> ${laptop.displaySpecs}<br>
-                <strong>Note:</strong> ${laptop.note || 'N/A'}<br>
-                <strong>Considerations:</strong> ${laptop.considerations || 'N/A'}<br>
-                <strong>Total Price:</strong> Rp ${totalPrice.toLocaleString()}<br>
+                <img src="${laptop.imageUrl}" alt="${model}" 
+                     style="width:100%; max-width: 200px; height:auto; display: block; margin: 0 auto 10px; border-radius: 6px;">
+                <p style="font-size: 1em; line-height: 1.3; color: #333; margin: 0;">
+                    <strong>Brand:</strong> ${laptop.brand}<br>
+                    <strong>Role:</strong> ${laptop.role}<br>
+                    <strong>Segment:</strong> ${segment}<br>
+                    <strong>Processor:</strong> ${laptop.processor}<br>
+                    <strong>GPU:</strong> ${laptop.gpu}<br>
+                    <strong>Panel:</strong> ${laptop.panel}<br>
+                    <strong>RAM:</strong> ${ram}<br>
+                    <strong>Storage:</strong> ${storage}<br>
+                    <strong>Display Size:</strong> ${laptop.displaySize}<br>
+                    <strong>Display Specs:</strong> ${laptop.displaySpecs}<br>
+                    <strong>Note:</strong> ${laptop.note || 'N/A'}<br>
+                    <strong>Considerations:</strong> ${laptop.considerations || 'N/A'}<br>
+                    <strong>Total Price:</strong> Rp ${totalPrice.toLocaleString()}<br>
+                </p>
             </div>
         `,
         icon: 'info',
         confirmButtonText: 'Selesai',
         confirmButtonColor: '#28a745',
         background: '#f8f9fa',
-        width: '600px',
-        padding: '20px',
+        width: '450px', // Lebar SweetAlert disesuaikan agar tidak terlalu besar
+        padding: '15px', // Padding dikurangi untuk tampilan yang lebih ringkas
         customClass: {
             title: 'font-weight-bold',
             htmlContainer: 'text-start',
-            confirmButton: 'btn-large'
+            confirmButton: 'btn-small'
         }
     });
-}
+}    
