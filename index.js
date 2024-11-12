@@ -15,7 +15,7 @@ const laptopData = {
         considerations: "",
         basePrice: 3500000,
         imageUrl: "/assets/IDEA SLIM1.png",
-        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-1"
+        shopeeUrl: "https://shopee.co.id/Notebook-Lenovo-Idea-Pad-Slim-1-14-N4020-8-512-W11-Ohs-Grey-i.4443459.27412854179?sp_atk=ac304a1e-9c48-4a02-abe5-5db61e7f34cd&xptdk=ac304a1e-9c48-4a02-abe5-5db61e7f34cd
     },
     "V14 G3 IAP": {
         brand: "LENOVO V14 G3 IAP",
@@ -33,7 +33,7 @@ const laptopData = {
         considerations: "",
         basePrice: 4000000,
         imageUrl: "/assets/v14 g3.png",
-        shopeeUrl: "https://shopee.co.id/V14-G3-IAP"
+        shopeeUrl: "https://shopee.co.id/Lenovo-V14-G3-I3-1215u-8gb-512gb-W11-14.0-FHD-MEID-i.1368474464.26667007765?sp_atk=b86f4ae7-6c47-4af9-b691-768259c547a4&xptdk=b86f4ae7-6c47-4af9-b691-768259c547a4"
     },
     "Ideapad Slim 3": {
         brand: "LENOVO Ideapad Slim 3",
@@ -51,7 +51,7 @@ const laptopData = {
         considerations: "",
         basePrice: 5000000,
         imageUrl: "/assets/SLIM 3 I3.png",
-        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-3"
+        shopeeUrl: "https://shopee.co.id/LENOVO-IDEAPAD-SLIM-3-14-I3-1215-8GB-256GB-14.0FHD-BLIT-i.1031894725.29362769057?sp_atk=8f6bbbae-3cdd-44db-8ba4-d30ed42e349f&xptdk=8f6bbbae-3cdd-44db-8ba4-d30ed42e349f"
     },
     "V14 G4 RYZEN 5": {
         brand: "LENOVO V14 G4 RYZEN 5",
@@ -69,7 +69,7 @@ const laptopData = {
         considerations: "",
         basePrice: 7549000,
         imageUrl: "/assets/V14 G4.png",
-        shopeeUrl: "https://shopee.co.id/V14-G4-RYZEN-5"
+        shopeeUrl: "https://shopee.co.id/LENOVO-V14-G4-RYZEN-5-7430-16GB-512GB-W11-OHS-14.0FHD-i.1275013122.29264154650?sp_atk=f7b43e7f-be9d-4820-acb9-39acea6e97fe&xptdk=f7b43e7f-be9d-4820-acb9-39acea6e97fe"
     },
     "Ideapad Slim 3 14": {
         brand: "LENOVO Ideapad Slim 3 14",
@@ -87,7 +87,7 @@ const laptopData = {
         considerations: "",
         basePrice: 8279000,
         imageUrl: "/assets/SLIM3.png",
-        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-3-14"
+        shopeeUrl: "https://shopee.co.id/LENOVO-IDEAPAD-SLIM-3-14-I5-12450H-8GB-512GB-W11-OHS-14.0FHD-IPS-BLIT-2Y-PREM-ARTIC-GRY-07ID-i.1119892890.25228531559?sp_atk=837c43bb-4c39-42cd-ab50-e071e3edf136&xptdk=837c43bb-4c39-42cd-ab50-e071e3edf136"
     },
     "Ideapad Duet 3i 11 Touch": {
         brand: "LENOVO Ideapad Duet 3i 11 Touch",
@@ -105,7 +105,7 @@ const laptopData = {
         considerations: "Masih menggunakan Celeron",
         basePrice: 8999000,
         imageUrl: "/assets/IDEAPAD 3I.png",
-        shopeeUrl: "https://shopee.co.id/Ideapad-Duet-3i-11-Touch"
+        shopeeUrl: "https://shopee.co.id/Lenovo-Ideapad-Duet-3-2-in-1-Touchscreen-N200-8GB-256GB-SSD-11-5-inch-2K-IPS-Windows-11-OHS-i.468999408.19190525192?sp_atk=7551ccb8-3717-4791-b378-ed746341f43f&xptdk=7551ccb8-3717-4791-b378-ed746341f43f"
     },
     "IDEAPAD FLEX 5 14": {
         brand: "LENOVO IDEAPAD FLEX 5 14",
@@ -123,7 +123,7 @@ const laptopData = {
         considerations: "",
         basePrice: 10249000,
         imageUrl: "/assets/FLEX5.png",
-        shopeeUrl: "https://shopee.co.id/IDEAPAD-FLEX-5-14"
+        shopeeUrl: "https://shopee.co.id/LENOVO-IDEAPAD-FLEX-5-14ALC7-RYZEN-5-5500U-8GB-512GB-14-WUXGA-TOUCH-IPS-i.1031894725.25937980968?sp_atk=60e53cb7-3131-47ee-9582-23516376b97e&xptdk=60e53cb7-3131-47ee-9582-23516376b97e"
     },
     "LOQ 15 RTX 2050": {
         brand: "LENOVO LOQ 15 RTX 2050",
@@ -141,7 +141,7 @@ const laptopData = {
         considerations: "",
         basePrice: 10749000,
         imageUrl: "/assets/LOQ2050.png",
-        shopeeUrl: "https://shopee.co.id/LOQ-15-RTX-2050"
+        shopeeUrl: "https://shopee.co.id/LENOVO-LOQ-15-GeForce-RTX%E2%84%A2-2050-4GB-i5-12450HX-12GB-512GB-W11-OHS-15.6FHD-144HZ-100SRGB-1HID-i.697642074.10188638773?sp_atk=34a0a045-26db-4521-9217-690b86579f1e&xptdk=34a0a045-26db-4521-9217-690b86579f1e"
     },
     "Ideapad Slim 5 Light 14": {
         brand: "LENOVO Ideapad Slim 5 Light 14",
@@ -159,7 +159,7 @@ const laptopData = {
         considerations: "",
         basePrice: 10949000,
         imageUrl: "/assets/SLIM 5 LIGHT.png",
-        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-5-Light-14"
+        shopeeUrl: "https://shopee.co.id/LENOVO-IDEAPAD-SLIM-5-14ABR8-RYZEN-7-7730U-16GB-512GB-SSD-INTEGRATED-14--i.60324286.29104572679?sp_atk=1daf786e-e071-4b91-8bfb-7e628272f958&xptdk=1daf786e-e071-4b91-8bfb-7e628272f958"
     },
     "Ideapad Slim 5": {
         brand: "LENOVO Ideapad Slim 5",
@@ -177,7 +177,7 @@ const laptopData = {
         considerations: "",
         basePrice: 11299000,
         imageUrl: "/assets/SLIM5.png",
-        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-5"
+        shopeeUrl: "https://shopee.co.id/Lenovo-Ideapad-Slim-5-OLED-AMD-Ryzen-7-7730U-16GB-RAM-512GB-SSD-Windows-11-WUXGA-14-Inch-14ABR8-9UID-i.468999408.28200107838?sp_atk=54aa4cfc-5c13-4d3c-9ca0-c46325603050&xptdk=54aa4cfc-5c13-4d3c-9ca0-c46325603050"
     },
     "Ideapad Slim 5 (Gaming)": {
         brand: "LENOVO Ideapad Slim 5 (Gaming)",
@@ -195,7 +195,7 @@ const laptopData = {
         considerations: "",
         basePrice: 12199000,
         imageUrl: "/assets/SLIM5.png",
-        shopeeUrl: "https://shopee.co.id/Ideapad-Slim-5-Gaming"
+        shopeeUrl: "https://shopee.co.id/LENOVO-IDEAPAD-SLIM-5-14-OLED-ULTRA-5-125H-16GB-512GB-W11-OHS-14.0WUXGA-i.1275013122.28112795007?sp_atk=6e9d20ff-dc4c-4b15-943b-95983a5fa4c6&xptdk=6e9d20ff-dc4c-4b15-943b-95983a5fa4c6"
     },
     "LOQ 15 RTX 3050": {
         brand: "LENOVO LOQ 15 RTX 3050",
@@ -213,7 +213,7 @@ const laptopData = {
         considerations: "",
         basePrice: 13490000,
         imageUrl: "/assets/LOQ 3050.png",
-        shopeeUrl: "https://shopee.co.id/LOQ-15-RTX-3050"
+        shopeeUrl: "https://shopee.co.id/LENOVO-LOQ-15-I5-12450HX-RTX3050-6GB-20GB-512GB-W11-OHS-15.6FHD-144HZ-100SRGB-i.1275013122.27813408736?sp_atk=d6fdacbc-4e98-4bf1-87f9-61ba4f8cfcf4&xptdk=d6fdacbc-4e98-4bf1-87f9-61ba4f8cfcf4"
     }
 };
 
@@ -393,44 +393,47 @@ function displaySpecifications() {
     const storagePrice = additionalPrice[storage] || 0;
     const totalPrice = laptop.basePrice + ramPrice + storagePrice;
 
-   Swal.fire({
-        title: 'Spesifikasi Laptop',
-        html: `
-            <div style="text-align: left;">
-                <img src="${laptop.imageUrl}" alt="${model}" 
-                     style="width:100%; max-width: 200px; height:auto; display: block; margin: 0 auto 10px; border-radius: 6px;">
-                <p style="font-size: 1em; line-height: 1.3; color: #333; margin: 0;">
-                    <strong>Brand:</strong> ${laptop.brand}<br>
-                    <strong>Role:</strong> ${laptop.role}<br>
-                    <strong>Segment:</strong> ${segment}<br>
-                    <strong>Processor:</strong> ${laptop.processor}<br>
-                    <strong>GPU:</strong> ${laptop.gpu}<br>
-                    <strong>Panel:</strong> ${laptop.panel}<br>
-                    <strong>RAM:</strong> ${ram}<br>
-                    <strong>Storage:</strong> ${storage}<br>
-                    <strong>Display Size:</strong> ${laptop.displaySize}<br>
-                    <strong>Display Specs:</strong> ${laptop.displaySpecs}<br>
-                    <strong>Note:</strong> ${laptop.note || 'N/A'}<br>
-                    <strong>Considerations:</strong> ${laptop.considerations || 'N/A'}<br>
-                    <strong>Total Price:</strong> Rp ${totalPrice.toLocaleString()}<br>
-                </p>
-                <div style="text-align: center; margin-top: 15px;">
-                    <a href="${laptop.shopeeUrl}" target="_blank" style="color: #ffffff; background-color: #fa3c4c; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
-                        Beli di Shopee
-                    </a>
-                </div>
+Swal.fire({
+    title: 'Spesifikasi Laptop',
+    html: `
+        <div style="text-align: left;">
+            <img src="${laptop.imageUrl}" alt="${model}" 
+                 style="width:100%; max-width: 200px; height:auto; display: block; margin: 0 auto 10px; border-radius: 6px;">
+            <p style="font-size: 1em; line-height: 1.3; color: #333; margin: 0;">
+                <strong>Brand:</strong> ${laptop.brand}<br>
+                <strong>Role:</strong> ${laptop.role}<br>
+                <strong>Segment:</strong> ${segment}<br>
+                <strong>Processor:</strong> ${laptop.processor}<br>
+                <strong>GPU:</strong> ${laptop.gpu}<br>
+                <strong>Panel:</strong> ${laptop.panel}<br>
+                <strong>RAM:</strong> ${ram}<br>
+                <strong>Storage:</strong> ${storage}<br>
+                <strong>Display Size:</strong> ${laptop.displaySize}<br>
+                <strong>Display Specs:</strong> ${laptop.displaySpecs}<br>
+                <strong>Note:</strong> ${laptop.note || 'N/A'}<br>
+                <strong>Considerations:</strong> ${laptop.considerations || 'N/A'}<br>
+                <strong>Total Price:</strong> Rp ${totalPrice.toLocaleString()}<br>
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+                <a href="${laptop.shopeeUrl}" target="_blank" style="color: #ffffff; background-color: #fa3c4c; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 0.9em;">
+                    Beli di Shopee
+                </a>
+                <button id="finishButton" style="color: #ffffff; background-color: #28a745; padding: 10px 20px; border: none; border-radius: 5px; font-size: 0.9em;">
+                    Selesai
+                </button>
             </div>
-        `,
-        icon: 'info',
-        confirmButtonText: 'Selesai',
-        confirmButtonColor: '#28a745',
-        background: '#f8f9fa',
-        width: '450px', 
-        padding: '15px',
-        customClass: {
-            title: 'font-weight-bold',
-            htmlContainer: 'text-start',
-            confirmButton: 'btn-small'
-        }
-    });
-}    
+        </div>
+    `,
+    showConfirmButton: false,
+    background: '#f8f9fa',
+    width: '450px',
+    padding: '15px',
+    customClass: {
+        title: 'font-weight-bold',
+        htmlContainer: 'text-start'
+    }
+});
+
+// Event listener untuk tombol "Selesai"
+document.getElementById("finishButton").addEventListener("click", () => Swal.close());
+
